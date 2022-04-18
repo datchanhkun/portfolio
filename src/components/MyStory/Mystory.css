@@ -75,10 +75,112 @@
 }
 .funfact-col {
   width: calc(25% - 2rem);
+  margin-top: 1.5rem;
+  margin-bottom: 1.25rem;
 }
-.funfact-col .container {
-  background: var(--card-container-bg);
-  backdrop-filter: blur(4px);
+.funfact-col .funfact-container {
+  transform-style: preserve-3d;
+}
+.funfact-col .funfact-container .front {
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.funfact-container .back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background: var(--card-back-bg);
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+.front, .back {
+  box-shadow: var(--card-shadow);
+  -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -o-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1),
+    -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  min-height: 200px;
+}
+.front::after {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.funfact-container:hover .front,
+.funfact-container:hover .back {
+  -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -o-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1),
+    -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+.inner {
+  -webkit-perspective: inherit;
+  perspective: inherit;
+  z-index: 2;
+  width: 100%;
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.funfact-container:hover .back {
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 
+}
+
+.funfact-container:hover .front {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.front .inner p {
+  margin-bottom: 2rem;
+}
+.front .inner p::after {
+  content: "";
+  width: 4rem;
+  height: 2px;
+  background: #ffffff;
+  margin: 0 auto;
+  bottom: -0.75rem;
+  position: absolute;
+  display: block;
+  left: 0;
+  right: 0;
+}
+.front .inner p {
+  position: relative;
 }
