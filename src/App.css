@@ -20,6 +20,7 @@
   --myself-card-shadow: #0000001a;
   --myself-card-border: #ffffff40;
   --card-container-bg: #ffffff40;
+  --card-shadow: 0 4px 8px 0 #00000040;
 }
 body {
   font-family: "Gumela";
