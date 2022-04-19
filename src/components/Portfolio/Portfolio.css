@@ -1,0 +1,118 @@
+.portfolio-intro {
+  z-index: -1;
+
+}
+.portfolio-intro-svg {
+  position: absolute;
+  mix-blend-mode: screen;
+  overflow: visible !important;
+  z-index: -10;
+  user-select: none;
+}
+.portfolio-intro-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  font-size: 2.5rem;
+  gap: 2rem;
+  font-weight: 300;
+  height: 100%;
+}
+.portfolio-intro-text > span {
+  transform: translateY(100%);
+  animation: text-reveal 1.7s cubic-bezier(1, 0, 0.3, 0.9) forwards;
+}
+.portfolio-intro-text > :nth-child(2) {
+  animation-delay: 0.6s;
+}
+.portfolio-intro-text > :nth-child(3) {
+  animation-delay: 1.2s;
+}
+@keyframes text-reveal {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Title Floating */
+.portfolio-floating {
+  font-size: 9rem;
+  font-weight: 800;
+  animation: floating 5s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  margin-top: 22rem;
+}
+.portfolio-floating-title {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: tilting 10s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+}
+.portfolio-floating-title > span {
+  transition: font-weight 0.4s ease-in;
+  animation: floating-secondary 2.5s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+}
+.portfolio-floating-title > span:nth-child(1) {
+  animation-delay: 1s;
+}
+.portfolio-floating-title > span:nth-child(2) {
+  animation-delay: 2s;
+}
+.portfolio-floating-title > span:nth-child(3) {
+  animation-delay: 3s;
+}
+.portfolio-floating-title > span:nth-child(4) {
+  animation-delay: 4s;
+}
+.portfolio-floating-title > span:nth-child(5) {
+  animation-delay: 5s;
+}
+.portfolio-floating-title > span:nth-child(6) {
+  animation-delay: 6s;
+}
+.portfolio-floating-title > span:nth-child(7) {
+  animation-delay: 7s;
+}
+.portfolio-floating-title > span:nth-child(8) {
+  animation-delay: 8s;
+}
+.portfolio-floating-title > span:nth-child(9) {
+  animation-delay: 9s;
+}
+@keyframes floating {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 5vh);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes tilting {
+  0% {
+    transform: rotate(1deg);
+  }
+  50% {
+    transform: rotate(-1deg);
+  }
+  100% {
+    transform: rotate(1deg);
+  }
+}
+@keyframes floating-secondary {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 1vh);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

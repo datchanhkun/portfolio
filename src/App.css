@@ -31,7 +31,8 @@ body {
 .App {
   padding: 0.5rem 15rem;
   overflow: hidden;
-  color: white;
+  color: black;
+  position: relative;
 }
 
 .button {
