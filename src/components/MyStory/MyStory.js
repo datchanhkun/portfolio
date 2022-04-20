@@ -2,7 +2,7 @@ import React from "react";
 import "./Mystory.css";
 import Globe from "../../assets/images/globe.svg";
 import Music from "../../assets/images/listenMusic.png";
-import { funfactList } from "../../funfactList";
+import { funfactList } from "../../data";
 const MyStory = () => {
   return (
     <div className="story-wraper">

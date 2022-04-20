@@ -8,6 +8,7 @@
   overflow: visible !important;
   z-index: -10;
   user-select: none;
+  
 }
 .portfolio-intro-text {
   display: flex;
@@ -115,4 +116,7 @@
   100% {
     transform: translate(0, 0);
   }
+}
+.portfolio-intro .spacer-div {
+  margin-top: 24rem;
 }

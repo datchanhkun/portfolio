@@ -21,6 +21,14 @@
   --myself-card-border: #ffffff40;
   --card-container-bg: #ffffff40;
   --card-shadow: 0 4px 8px 0 #00000040;
+  --skill-border: 1px solid #fff3;
+  --skill-bg: hsla(0,0%,100%,.527);
+  --skill-shadow: #00000026 0px 5px 15px 0px;
+  --skill-bg-hover: hsla(0,0%,100%,.767);
+  --ability-bg: hsla(0,0%,100%,.375);
+  --ability-border: 1px solid rgba(41,41,41,.041);
+  --ability-shadow: 0 0.75rem 2rem 0 #7272721a;
+  --ability-bg-hover: hsla(0,0%,100%,.767);
 }
 body {
   font-family: "Gumela";

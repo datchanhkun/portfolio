@@ -3,6 +3,7 @@ import Intro from './components/Intro/Intro';
 import MyStory from './components/MyStory/MyStory';
 import Navbar from './components/Navbar/Navbar';
 import Portfolio from './components/Portfolio/Portfolio'
+import MySkills from './components/MySkills/MySkills'
 function App() {
   return (
     <div className="App">
@@ -10,6 +11,7 @@ function App() {
       <Intro />
       <MyStory />
       <Portfolio />
+      <MySkills />
     </div>
   );
 }
