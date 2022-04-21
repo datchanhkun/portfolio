@@ -20,6 +20,12 @@
   --ability-shadow: 0 0.75rem 2rem 0 #7272721a;
   --ability-bg-hover: hsla(0,0%,100%,.767);
   --external-btn-border: #0000004d;
+  --form-bg: linear-gradient(-45deg,hsla(0,0%,100%,.137),hsla(0,0%,100%,.603));
+  --form-shadow: 0 8px 32px 0 #1f26875e;
+  --form-border: 1px solid #ffffff2e;
+  --input-shadow: 4px 4px 60px #fff3;
+  --input-text: #2b2b2b;
+  --send-btn: #245edb;
 }
 body {
   font-family: "Gumela";
