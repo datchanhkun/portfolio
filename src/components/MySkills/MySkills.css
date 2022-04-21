@@ -6,8 +6,8 @@
 .eclipse {
   position: absolute;
   z-index: -10;
-  left: -45%;
-  top: 33%;
+  right: -45%;
+  top: 10%;
   animation: blob-float 6s ease-in-out 1s infinite alternate;
 }
 @keyframes blob-float {
