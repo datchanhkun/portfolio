@@ -6,6 +6,7 @@ import Portfolio from './components/Portfolio/Portfolio'
 import MySkills from './components/MySkills/MySkills'
 import Projects from './components/Projects/Projects'
 import Contact from './components/Contact/Contact'
+import Footer from './components/Footer/Footer'
 function App() {
   return (
     <>
@@ -18,6 +19,7 @@ function App() {
         <Projects />
       </div>
       <Contact />
+      <Footer />
     </>
 
   );

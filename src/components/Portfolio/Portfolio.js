@@ -38,11 +38,11 @@ const Portfolio = () => {
             <animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="19s" repeatCount="indefinite"></animateTransform>
           </rect>
         </svg>
-        <div className='spacer-div'></div>
+        <div className='spacer-div1'></div>
         <div className='portfolio-intro-text'>
-          <div>Learn.</div>
-          <div>Code.</div>
-          <div>Travel.</div>
+          <span>Learn.</span>
+          <span>Code.</span>
+          <span>Travel.</span>
         </div>
       </div>
       <div className='portfolio-floating'>
