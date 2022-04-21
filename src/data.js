@@ -13,6 +13,12 @@ import MongoIcon from './assets/images/mongo.png'
 import NetlifyIcon from './assets/images/netlify.svg'
 import VercelIcon from './assets/images/vercel.svg'
 import HerokuIcon from './assets/images/heroku.svg'
+// Import image projects
+import Ood from './assets/images/ood.png'
+import Cms from './assets/images/cms.png'
+import Messenger from './assets/images/ood.png'
+import shoeStore from './assets/images/shoestore.png'
+import trelloClone from './assets/images/trelloclone.png'
 export const funfactList = [
   {
     id: 1,
@@ -148,4 +154,85 @@ export const abilitiesSkill = [
   "The goal is to build a new, modern, fast and reliable platform to serve all current and future front-end applications.",
   "Nodejs is an independent development platform built on top of Chrome's Javascript Runtime with which we can quickly and easily build network applications and create scalable applications. fast processing speed, realtime realtime with Socket IO and a great combination with MongoDB",
   "Deployment to platforms such as Vercel, Netlify, and Heroku to leverage caching and firewalls at the edge."
+]
+
+export const projects = [
+  {
+    id: 1,
+    img: `${Ood}`,
+    title: 'LANDING PAGE',
+    description: 'Landing Page introduces the business model and operating process of the company OOD',
+    time: '2020 - Web Development At SoftWorld VietNam',
+    frameworks : [
+      'Angular 8',
+      'SCSS',
+      'Strapi',
+      'Graphql'
+    ],
+    github: '',
+    domain: 'http://ood.vn/',
+    backgroundColor: 'linear-gradient(-120deg, #fedfe7, #fbedff)'
+  },
+  {
+    id: 2,
+    img: `${Cms}`,
+    title: 'CMS Promotion (CRUD)',
+    description: 'Building CMS Promotion for Digital Marketing can add, update, delete promotions and can automatically set the time',
+    time: '2021 - Web Development At PizzaHut VietNam',
+    frameworks : [
+      'ReactJS',
+      'Material UI',
+      'Redux Saga'
+    ],
+    github: '',
+    domain: '',
+    backgroundColor: 'linear-gradient(120deg, #d3e0ff, #eaeaff)'
+  },
+  {
+    id: 3,
+    img: `${Messenger}`,
+    title: 'App Chat Messenger',
+    description: 'The website supports users to register a new account and then log in to be able to find friends, send invitations to chat with friends, by sending messages, pictures, and attachments. is used real-time method',
+    time: '2020 - Web Development',
+    frameworks : [
+      'NodeJS',
+      'Socket IO',
+      'MongoDB'
+    ],
+    github: 'https://github.com/datchanhkun/project_appchatmess',
+    domain: '',
+    backgroundColor: 'linear-gradient(120deg, #ffeede, #fff9ea)'
+  },
+  {
+    id: 4,
+    img: `${shoeStore}`,
+    title: 'Shoe Store Ecommerce',
+    description: 'The website supports users to register, login, view, search for products, paginate, add products to the cart and proceed with payment with PayPal. For Admin Dashboard, you can add, delete, update products, manage orders ',
+    time: '2021 - Web Development',
+    frameworks : [
+      'ReactJS',
+      'Redux Thunk',
+      'NodeJS',
+      'MongoDB'
+    ],
+    github: 'https://github.com/datchanhkun/TDShoeStore-WEB',
+    domain: 'https://tdshoestore.netlify.app',
+    backgroundColor: 'linear-gradient(120deg, #e0f7ff, #dffff4)'
+  },
+  {
+    id: 5,
+    img: `${trelloClone}`,
+    title: 'Trello Clone',
+    description: 'Clone Trello App with features: add columns, add, delete, edit cards, drag and drop cards. ',
+    time: '2021 - Web Development',
+    frameworks : [
+      'ReactJS',
+      'SCSS',
+      'NodeJS',
+      'MongoDB'
+    ],
+    github: 'https://github.com/datchanhkun/TrelloClone',
+    domain: 'https://tdtrelloweb.netlify.app',
+    backgroundColor: 'linear-gradient(120deg, #fedfe7, #fbedff)'
+  },
 ]
