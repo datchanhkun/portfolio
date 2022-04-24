@@ -15,20 +15,8 @@
   background-clip: text;
   background-image: linear-gradient( 90deg, rgba(94, 114, 235, 1) 0%, rgba(255, 145, 144, 1) 56%, rgba(254, 193, 149, 1) 100% );
   margin-bottom: 2rem;
-  animation: tracking-in-expand 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
-@keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+
 .projects-cards {
   display: grid;
   grid-template-columns: repeat(1,minmax(0,1fr));

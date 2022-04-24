@@ -1,6 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import './Portfolio.css'
 const Portfolio = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+    AOS.refresh();
+  }, []);
   return (
     <div className='portfolio-wrapper'>
       <div className='portfolio-intro'>
@@ -40,9 +49,9 @@ const Portfolio = () => {
         </svg>
         <div className='spacer-div1'></div>
         <div className='portfolio-intro-text'>
-          <span>Learn.</span>
-          <span>Code.</span>
-          <span>Travel.</span>
+          <span data-aos="fade-right">Learn.</span>
+          <span data-aos="fade-up" data-aos-delay="300">Code.</span>
+          <span data-aos="fade-left" data-aos-delay="600">Travel.</span>
         </div>
       </div>
       <div className='portfolio-floating'>

@@ -2,6 +2,7 @@ import React from 'react'
 import './Navbar.css'
 import toogleSun from '../../assets/images/sun.svg'
 const Navbar = () => {
+
   return (
     <>
       <div className='nav-wrapper'>

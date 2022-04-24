@@ -1,11 +1,12 @@
 import React from 'react'
 import './Contact.css'
 const Contact = () => {
+
   return (
     <div className='contact-wrapper'>
       <div className='contact'>
         <div className='contact-content'>
-          <svg viewBox="0 0 900 110" className="contact-title"><text textAnchor="middle" x="50%" y="90%">Contact Me</text></svg>
+          <svg viewBox="0 0 900 110" className="contact-title"><text textAnchor="middle" x="50%" y="90%" >Contact Me</text></svg>
           <div className='div-space'></div>
           <div className='contact-form-wrapper'>
             <form className='contact-form'>
