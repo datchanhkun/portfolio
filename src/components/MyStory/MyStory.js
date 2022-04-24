@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import "./Mystory.css";
 import Globe from "../../assets/images/globe.svg";
 import Music from "../../assets/images/listenMusic.png";
 import { funfactList } from "../../data";
 const MyStory = () => {
+  useEffect(() => {
+    AOS.init({
+      once: true
+    });
+    AOS.refresh();
+  }, []);
   return (
     <div className="story-wraper">
       <span className="story-title">My Story</span>
@@ -33,7 +41,7 @@ const MyStory = () => {
         <img src={Music} alt="music" />
       </div>
       <div className="spacer-div"></div>
-      <div className="funfact-wrapper">
+      <div className="funfact-wrapper" data-aos="slide-up" data-aos-duration="1500">
         <div className="funfact-title">
           <span>Random fun facts about me</span>
         </div>

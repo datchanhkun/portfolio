@@ -1,15 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import './Projects.css'
 import { projects } from '../../data'
 const Projects = () => {
+  useEffect(() => {
+    AOS.init({
+      once: true
+    });
+    AOS.refresh();
+  }, []);
   return (
     <div className='projects-wrapper'>
-      <div className='projects-title'>
+      <div className='projects-title' data-aos="flip-right" data-aos-duration="2000">
         Recent Projects
       </div>
       <div className='projects-cards'>
         {projects.map((p) => (
-          <div className='project-card' key={p.id} style={{backgroundImage: `${p.backgroundColor}`}}>
+          <div className='project-card' key={p.id} style={{backgroundImage: `${p.backgroundColor}`}} data-aos="fade-up" data-aos-duration="1000">
           <img src={p.img} alt='ood' className='project-card-img' />
           <div className='project-card-content'>
             <div className='project-intro'>

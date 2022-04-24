@@ -1,3 +1,4 @@
+import React from 'react'
 import './App.css';
 import Intro from './components/Intro/Intro';
 import MyStory from './components/MyStory/MyStory';
@@ -7,6 +8,7 @@ import MySkills from './components/MySkills/MySkills'
 import Projects from './components/Projects/Projects'
 import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
+
 function App() {
   return (
     <>
@@ -16,7 +18,7 @@ function App() {
         <MyStory />
         <Portfolio />
         <MySkills />
-        <Projects />
+        <Projects/>
       </div>
       <Contact />
       <Footer />

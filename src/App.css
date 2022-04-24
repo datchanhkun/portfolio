@@ -14,11 +14,9 @@
   --skill-border: 1px solid #fff3;
   --skill-bg: hsla(0,0%,100%,.527);
   --skill-shadow: #00000026 0px 5px 15px 0px;
-  --skill-bg-hover: hsla(0,0%,100%,.767);
   --ability-bg: hsla(0,0%,100%,.375);
   --ability-border: 1px solid rgba(41,41,41,.041);
   --ability-shadow: 0 0.75rem 2rem 0 #7272721a;
-  --ability-bg-hover: hsla(0,0%,100%,.767);
   --external-btn-border: #0000004d;
   --form-bg: linear-gradient(-45deg,hsla(0,0%,100%,.137),hsla(0,0%,100%,.603));
   --form-shadow: 0 8px 32px 0 #1f26875e;
@@ -72,9 +70,4 @@ body {
   cursor: pointer;
   color: black;
 }
-/* .button:hover::after {
-  height: 120%;
-  left: -10%;
-  transform: skewX(15deg);
-  z-index: -1;
-} */
+/* Animation global */
