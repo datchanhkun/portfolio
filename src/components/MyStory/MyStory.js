@@ -1,11 +1,15 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useContext } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import "./Mystory.css";
 import Globe from "../../assets/images/globe.svg";
+import GlobeDark from "../../assets/images/globeDark.svg";
 import Music from "../../assets/images/listenMusic.png";
 import { funfactList } from "../../data";
+import { themeContext } from '../../Context'
 const MyStory = () => {
+  const theme = useContext(themeContext)
+  const darkMode = theme.state.darkMode
   useEffect(() => {
     AOS.init({
       once: true
@@ -13,8 +17,8 @@ const MyStory = () => {
     AOS.refresh();
   }, []);
   return (
-    <div className="story-wraper">
-      <span className="story-title">My Story</span>
+    <div className={darkMode ? "story-wraper" : "story-wrapper-dark"}>
+      <span className={darkMode ? "story-title" : "story-title-dark"}>My Story</span>
       <div className="story-content">
         <p className="story-content-text">
           I was born and raised in Quang Nam province, Vietnam. After graduating
@@ -23,11 +27,15 @@ const MyStory = () => {
           Technology. And now I'm starting my intensive front-end programming
           journey.
         </p>
-        <div className="globe">
-          <img src={Globe} alt="globe" />
+        <div className={darkMode ? "globe" : "globe-dark"}>
+          {darkMode ? (
+            <img src={Globe} alt="globe" />
+          ) : (
+            <img src={GlobeDark} alt="GlobeDark" />
+          )}
         </div>
       </div>
-      <div className="myself-card">
+      <div className={darkMode ? "myself-card" : "myself-card-dark"}>
         <div className="my-hobbies">
           <h2>A little bit about me</h2>
           <p>

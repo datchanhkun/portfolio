@@ -2,10 +2,10 @@
   transition: transform 2s, opacity 1s;
   height: fit-content;
   position: relative;
+  z-index: 1;
 }
 .eclipse {
   position: absolute;
-  z-index: -10;
   right: -45%;
   top: 10%;
   animation: blob-float 6s ease-in-out 1s infinite alternate;
@@ -27,11 +27,14 @@
   }
 }
 
-.skill-title {
+.skill-title, .skill-title-dark {
   display: inline-flex;
   font-size: 3.75rem;
   font-weight: 500;
   margin-bottom: 2.5rem;
+}
+.skill-title-dark {
+  color: #7bf0ff;
 }
 
 /* Skill List */
@@ -54,10 +57,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: var(--skill-border);
   border-radius: 15px;
-  background: var(--skill-bg);
-  box-shadow: var(--skill-shadow);
   position: relative;
   left: 0;
   top: 0;
@@ -65,13 +65,28 @@
   height: 100%;
   padding: 4px 2px;
 }
+.skill-card-light {
+  border: var(--skill-border);
+  background: var(--skill-bg);
+  box-shadow: var(--skill-shadow);
+}
+.skill-card-dark {
+  border: var(--skill-border-dark);
+  background: var(--skill-bg-dark);
+  box-shadow: var(--skill-shadow-dark);
+  color: white;
+}
+
 .skill-card .card {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.skill-card:hover {
+.skill-card-light:hover {
   filter: brightness(85%);
+}
+.skill-card-dark:hover {
+  filter: brightness(120%);
 }
 .skill-card .card img {
   width: 4rem;
@@ -97,14 +112,25 @@
   align-items: center;
   text-align: left;
   border-radius: 2rem;
-  background: var(--ability-bg);
-  box-shadow: var(--ability-shadow);
-  border: var(--ability-border);
   padding: 1rem;
   font-size: 1rem;
   line-height: 1.5rem;
   margin: 0;
 }
-.ability-card:hover {
+.ability-card-light {
+  background: var(--ability-bg);
+  box-shadow: var(--ability-shadow);
+  border: var(--ability-border);
+}
+.ability-card-dark {
+  background: var(--ability-bg-dark);
+  box-shadow: var(--ability-shadow-dark);
+  border: var(--ability-border-dark);
+  color: white;
+}
+.ability-card-light:hover {
   filter: brightness(85%);
+}
+.ability-card-dark:hover {
+  filter: brightness(120%);
 }

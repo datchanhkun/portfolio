@@ -1,15 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Contact.css'
+import { themeContext } from '../../Context'
 const Contact = () => {
-
+  const theme = useContext(themeContext)
+  const darkMode = theme.state.darkMode
   return (
-    <div className='contact-wrapper'>
+    <>
+    <div className={`space-div-contact ${darkMode ? '' : 'div-dark'}`}></div>
+      <div className={`contact-wrapper ${darkMode ? '' : 'contact-dark'}`}>
       <div className='contact'>
         <div className='contact-content'>
           <svg viewBox="0 0 900 110" className="contact-title"><text textAnchor="middle" x="50%" y="90%" >Contact Me</text></svg>
           <div className='div-space'></div>
           <div className='contact-form-wrapper'>
-            <form className='contact-form'>
+            <form className={`contact-form ${darkMode ? 'form-light' : 'form-dark'}`}>
               <label>Your name</label>
               <input type='text' name='name' required/>
               <label>Your email</label>
@@ -23,7 +27,7 @@ const Contact = () => {
           </div>
           <div className='contact-info'>
             <div className='contact-icon'>
-              <div className='icon icon-facebook'>
+              <div className={`icon icon-facebook ${darkMode ? 'icon-light' : 'icon-dark'}`}>
                 <div className='tooltip'>Facebook </div>
                 <a target="_blank" rel="noopener noreferrer" href='https://www.facebook.com/datchanhkun'>
                   <span>
@@ -31,7 +35,7 @@ const Contact = () => {
                   </span>
                 </a>
               </div>
-              <div className='icon icon-twitter'>
+              <div className={`icon icon-twitter ${darkMode ? 'icon-light' : 'icon-dark'}`}>
                 <div className='tooltip'>Twitter</div>
                 <a target="_blank" rel="noopener noreferrer" href='https://twitter.com/thanhdat0303'>
                   <span>
@@ -39,7 +43,7 @@ const Contact = () => {
                   </span>
                 </a>
               </div>
-              <div className='icon icon-instagram'>
+              <div className={`icon icon-instagram ${darkMode ? 'icon-light' : 'icon-dark'}`}>
                 <div className='tooltip'>Instagram</div>
                 <a target="_blank" rel="noopener noreferrer" href='https://www.instagram.com/thanhdat0303'>
                   <span>
@@ -47,7 +51,7 @@ const Contact = () => {
                   </span>
                 </a>
               </div>
-              <div className='icon icon-github'>
+              <div className={`icon icon-github ${darkMode ? 'icon-light' : 'icon-dark'}`}>
                 <div className='tooltip'>Github</div>
                 <a target="_blank" rel="noopener noreferrer" href='https://github.com/datchanhkun'>
                   <span>
@@ -55,7 +59,7 @@ const Contact = () => {
                   </span>
                 </a>
               </div>
-              <div className='icon icon-linkedin'>
+              <div className={`icon icon-linkedin ${darkMode ? 'icon-light' : 'icon-dark'}`}>
                 <div className='tooltip'>LinkedIn</div>
                 <a target="_blank" rel="noopener noreferrer" href='www.linkedin.com/in/datchanhkun'>
                   <span>
@@ -68,6 +72,8 @@ const Contact = () => {
         </div>
       </div>
     </div>
+    </>
+
   )
 }
 

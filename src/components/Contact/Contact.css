@@ -1,5 +1,10 @@
+.space-div-contact {
+  height: 8rem;
+}
+.div-dark {
+  background-color: var(--bg-color-dark);
+}
 .contact-wrapper {
-  margin-top: 8rem;
   background-image: url('../../assets/images/gradient2.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -7,6 +12,9 @@
   width: screen;
   z-index: -10;
   overflow-x: hidden;
+}
+.contact-dark {
+  filter: brightness(85%);
 }
 .contact-wrapper .contact{
   position: relative;
@@ -66,11 +74,17 @@
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  background: var(--form-bg);
   box-shadow: var(--form-shadow);
   border-radius: 10px;
   border: var(--form-border);
   width: 100%;
+}
+.form-light {
+  background: var(--form-bg);
+}
+.form-dark {
+  background: var(--form-bg-dark);
+  color: white;
 }
 .contact-form label {
   padding: 0.5rem 0;
@@ -119,7 +133,7 @@
 }
 .contact-icon .icon {
   position: relative;
-  background-color: white;
+
   border-radius: 50%;
   box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
   cursor: pointer;
@@ -131,8 +145,19 @@
   justify-content: center;
   align-items: center;
 }
-.contact-icon .icon svg {
+.icon-light {
+  background-color: white;
   color: black;
+}
+.icon-dark {
+  background-color: #172029;
+
+}
+.contact-icon .icon-light svg {
+  color: black;
+}
+.contact-icon .icon-dark svg {
+  color: white;
 }
 .contact-icon .icon:hover svg {
   color: white;

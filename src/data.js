@@ -171,7 +171,8 @@ export const projects = [
     ],
     github: '',
     domain: 'http://ood.vn/',
-    backgroundColor: 'linear-gradient(-120deg, #fedfe7, #fbedff)'
+    backgroundColorLight: 'linear-gradient(-120deg, #fedfe7, #fbedff)',
+    backgroundColorDark: 'linear-gradient(120deg, rgba(255, 91, 137, 0.25) 53.5%, rgba(234, 68, 68, 0.25) 100.2%)'
   },
   {
     id: 2,
@@ -186,7 +187,8 @@ export const projects = [
     ],
     github: '',
     domain: '',
-    backgroundColor: 'linear-gradient(120deg, #d3e0ff, #eaeaff)'
+    backgroundColorLight: 'linear-gradient(120deg, #d3e0ff, #eaeaff)',
+    backgroundColorDark: 'linear-gradient(120deg, rgba(82, 91, 219, 0.25) 11.2%, rgba(65, 71, 150, 0.25))'
   },
   {
     id: 3,
@@ -201,7 +203,8 @@ export const projects = [
     ],
     github: 'https://github.com/datchanhkun/project_appchatmess',
     domain: '',
-    backgroundColor: 'linear-gradient(120deg, #ffeede, #fff9ea)'
+    backgroundColorLight: 'linear-gradient(120deg, #ffeede, #fff9ea)',
+    backgroundColorDark: 'linear-gradient(120deg, rgba(217, 164, 4, 0.25) 10.7%, rgba(242, 116, 5, 0.25) 113.2%)'
   },
   {
     id: 4,
@@ -217,7 +220,8 @@ export const projects = [
     ],
     github: 'https://github.com/datchanhkun/TDShoeStore-WEB',
     domain: 'https://tdshoestore.netlify.app',
-    backgroundColor: 'linear-gradient(120deg, #e0f7ff, #dffff4)'
+    backgroundColorLight: 'linear-gradient(120deg, #e0f7ff, #dffff4)',
+    backgroundColorDark: 'linear-gradient(120deg, rgba(14, 174, 87, 0.25) 0%, rgba(12, 116, 117, 0.25) 90%)'
   },
   {
     id: 5,
@@ -233,6 +237,7 @@ export const projects = [
     ],
     github: 'https://github.com/datchanhkun/TrelloClone',
     domain: 'https://tdtrelloweb.netlify.app',
-    backgroundColor: 'linear-gradient(120deg, #fedfe7, #fbedff)'
+    backgroundColorLight: 'linear-gradient(120deg, #fedfe7, #fbedff)',
+    backgroundColorDark: 'linear-gradient(-120deg, rgba(255, 91, 137, 0.25) 53.5%, rgba(234, 68, 68, 0.25) 100.2%)'
   },
 ]

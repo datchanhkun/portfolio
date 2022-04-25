@@ -1,10 +1,13 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useContext } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import './MySkills.css'
 import Eclipse from '../../assets/images/Eclipse.svg'
 import { skillList, abilitiesSkill } from '../../data'
+import { themeContext } from '../../Context'
 const MySkills = () => {
+  const theme = useContext(themeContext)
+  const darkMode = theme.state.darkMode
   useEffect(() => {
     AOS.init({
       duration: 500,
@@ -16,7 +19,7 @@ const MySkills = () => {
     <div className='mySkills'>
       <div className='skills-container'>
         <img src={Eclipse} alt='Eclipse' className='eclipse' />
-        <span className='skill-title'>
+        <span className={darkMode ? 'skill-title' : 'skill-title-dark'} >
           <span data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-duration="1000">M</span>
           <span data-aos="fade-left" data-aos-delay="500" data-aos-easing="ease-in" data-aos-duration="1000">y</span>
           <span>&nbsp;</span>
@@ -30,7 +33,7 @@ const MySkills = () => {
         <div className='skill-wrapper'>
           <div className='skill-cards' data-aos="slide-up" data-aos-duration="1500">
             {skillList.map((skill) => (
-              <div className='skill-card' key={skill.id}>
+              <div className={`skill-card ${darkMode ? 'skill-card-light' : 'skill-card-dark'}`} key={skill.id}>
                 <div className='card'>
                   <img src={skill.img} alt={skill.title} />
                   <p>{skill.title}</p>
@@ -41,7 +44,7 @@ const MySkills = () => {
           <ul className='abilities-wrapper' data-aos="fade-left" data-aos-duration="1500">
           {abilitiesSkill.map((ability, index) => (
             <li key={index}>
-              <div className='ability-card'>
+              <div className={`ability-card ${darkMode ? 'ability-card-light' : 'ability-card-dark'}`}>
                 <p>{ability}</p>
               </div>
             </li>

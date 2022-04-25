@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Navbar.css'
 import toogleSun from '../../assets/images/sun.svg'
+import toogleMoon from '../../assets/images/moon.svg'
+import { themeContext } from '../../Context'
 const Navbar = () => {
+  const theme = useContext(themeContext)
+  const darkMode = theme.state.darkMode
 
+  const changeDarkTheme = () => {
+    theme.dispatch({type: 'toggle'})
+  }
   return (
     <>
       <div className='nav-wrapper'>
@@ -26,12 +33,17 @@ const Navbar = () => {
           </ul>
         </div>
         <div className='nav-toogle'>
-          <button className='btn-toogle'>
-            <img src={toogleSun} alt="toogleSun"/>
+          <button className={darkMode ? 'btn-toogle' : 'btn-toogle-dark'} onClick={changeDarkTheme}>
+            {darkMode ? (
+              <img src={toogleSun} alt="toogleSun"/>
+            ) : (
+              <img src={toogleMoon} alt="toogleMoon"/>
+            )}
+
           </button>
         </div>
       </div>
-      <div className='stripes'></div>
+      <div className={`stripes ${darkMode ? 'theme-light' : 'theme-dark'}`}></div>
     </>
 
   )

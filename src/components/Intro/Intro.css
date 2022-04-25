@@ -118,15 +118,22 @@
   width: 14rem;
   height: 3rem;
 }
-.intro-right {
+.intro-right, .intro-right-dark {
   text-align: right;
   flex: 1;
+  z-index: 2;
 }
 .intro-right>img{
   height: 30rem;
   outline: 1px solid #fff;
   outline-offset: calc(-9px);
   box-shadow: 5px 5px 30px 20px rgba(236, 222, 90, 0.42);
+}
+.intro-right-dark>img{
+  height: 30rem;
+  outline: 1px solid #fff;
+  outline-offset: calc(-9px);
+  box-shadow: none;
 }
 /* Animation for button */
 .intro-button {

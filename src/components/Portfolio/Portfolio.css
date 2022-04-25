@@ -1,14 +1,15 @@
+.portfolio-wrapper {
+  position: relative;
+}
 .portfolio-intro {
   z-index: -1;
-  position: relative;
-
 }
 
 .portfolio-intro-svg {
   position: absolute;
   mix-blend-mode: screen;
   overflow: visible !important;
-  z-index: -10;
+  /* z-index: -10; */
   user-select: none;
   
 }
@@ -28,6 +29,7 @@
 
 /* Title Floating */
 .portfolio-floating {
+  z-index: 1;
   font-size: 9rem;
   font-weight: 800;
   animation: floating 5s cubic-bezier(0.37, 0, 0.63, 1) infinite;

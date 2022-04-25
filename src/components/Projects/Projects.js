@@ -1,9 +1,12 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useContext } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import './Projects.css'
 import { projects } from '../../data'
+import { themeContext } from '../../Context'
 const Projects = () => {
+  const theme = useContext(themeContext)
+  const darkMode = theme.state.darkMode
   useEffect(() => {
     AOS.init({
       once: true
@@ -17,13 +20,13 @@ const Projects = () => {
       </div>
       <div className='projects-cards'>
         {projects.map((p) => (
-          <div className='project-card' key={p.id} style={{backgroundImage: `${p.backgroundColor}`}} data-aos="fade-up" data-aos-duration="1000">
-          <img src={p.img} alt='ood' className='project-card-img' />
+          <div className={`project-card ${darkMode ? '' : 'project-dark'}`} key={p.id} style={{backgroundImage: `${darkMode ? p.backgroundColorLight : p.backgroundColorDark}`}} data-aos="fade-up" data-aos-duration="1000">
+          <img src={p.img} alt='ood' className={`project-card-img ${darkMode ? '' : 'project-card-img-dark'}`} />
           <div className='project-card-content'>
             <div className='project-intro'>
               <p className='project-title'>{p.title}</p>
               <p className='project-desc'>{p.description}</p>
-              <p className='project-time'>{p.time}</p>
+              <p className={`project-time ${darkMode ? 'project-time-light' : 'project-time-dark'}`}>{p.time}</p>
             </div>
             <div className='project-frameworks'>
               {p.frameworks && p.frameworks.map((fr, index) => (
@@ -34,9 +37,9 @@ const Projects = () => {
                 </div>
               ))}
             </div>
-            <div className='project-buttons'>
+            <div className={`project-buttons ${darkMode ? '' : 'project-buttons-dark'}`}>
               <a href='##' className={p.github === '' ? 'disabled-wrapper' : 'externalLinkButton-wrapper'}>
-                <button className={p.github === '' ? 'disabled-button' : 'externalLinkButton-button'}>
+                <button className={`${p.github === '' ? 'disabled-button' : darkMode ? 'externalLinkButton-button' : 'externalLinkButton-buttonDark'}`}>
                   <span className='externalLinkButton-buttonContent'>
                     View source
                     <div className='arrow-animation'>
@@ -46,7 +49,7 @@ const Projects = () => {
                 </button>
               </a>
               <a href='##' className={p.domain === '' ? 'disabled-wrapper' : 'externalLinkButton-wrapper'}>
-                <button className={p.domain === '' ? 'disabled-button' : 'externalLinkButton-button'}>
+                <button className={`${p.domain === '' ? 'disabled-button' : darkMode ? 'externalLinkButton-button' : 'externalLinkButton-buttonDark'}`}>
                   <span className='externalLinkButton-buttonContent'>
                     Visit Website
                     <div className='arrow-animation'>
