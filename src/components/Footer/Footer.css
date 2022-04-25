@@ -2,6 +2,10 @@
   width: 100%;
   position: relative;
 }
+.footer-dark {
+  background-color: #172029;
+  color: white;
+}
 .footer {
   display: flex;
   flex-direction: column;

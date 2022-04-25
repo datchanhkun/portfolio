@@ -30,12 +30,14 @@
   background-image: linear-gradient(120deg, #81d0ec, #b1dbe9);
   background-size: cover;
   gap: 2.5rem;
-
 }
 .project-card-img {
   width: 100%;
   height: 22rem;
   object-fit: cover;
+}
+.project-card-img-dark {
+  filter: brightness(85%);
 }
 .project-card-content {
   display: flex;
@@ -61,7 +63,13 @@
   font-size: .875rem;
   line-height: 1.25rem;
   padding-bottom: 0.5rem;
+
+}
+.project-time-light {
   color: #374151;
+}
+.project-time-dark {
+  color: hsla(0,100%,97%,.808);;
 }
 .project-frameworks {
   display: flex;
@@ -85,6 +93,9 @@
   font-size: .875rem;
   gap: 1rem;
 }
+.project-dark {
+  color: white;
+}
 .project-buttons .externalLinkButton-wrapper {
   border: 1px solid var(--external-btn-border);
   padding: 0.5rem 0.75rem;
@@ -94,7 +105,12 @@
   cursor: pointer;
   background-color: initial;
   border: none;
-  /* display: inline-flex; */
+}
+.externalLinkButton-buttonDark {
+  cursor: pointer;
+  background-color: initial;
+  border: none;
+  color: white;
 }
 .externalLinkButton-buttonContent {
   position: relative;

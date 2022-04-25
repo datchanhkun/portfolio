@@ -1,10 +1,12 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useContext } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import './Intro.css';
 import Avatar from '../../assets/images/avatar.png'
-
+import { themeContext } from '../../Context'
 const Intro = () => {
+  const theme = useContext(themeContext)
+  const darkMode = theme.state.darkMode
   useEffect(() => {
     AOS.init({
       duration: 3000,
@@ -39,7 +41,7 @@ const Intro = () => {
             Download My Resume
           </button>
         </div>
-        <div className='intro-right'>
+        <div className={darkMode ? 'intro-right' : 'intro-right-dark'}>
             <img src={Avatar} alt='Avatar' />
         </div>
     </div>

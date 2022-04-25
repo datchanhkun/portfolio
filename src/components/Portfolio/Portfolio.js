@@ -1,8 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useContext } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import './Portfolio.css'
+import { themeContext } from '../../Context'
 const Portfolio = () => {
+  const theme = useContext(themeContext)
+  const darkMode = theme.state.darkMode
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -11,7 +14,7 @@ const Portfolio = () => {
     AOS.refresh();
   }, []);
   return (
-    <div className='portfolio-wrapper'>
+    <div className='portfolio-wrapper' style={{color: `${darkMode ? 'black' : 'white'}`}}>
       <div className='portfolio-intro'>
         <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" className="portfolio-intro-svg">
           <defs>
