@@ -3,12 +3,14 @@
   display: flex;
   flex-direction: column;
   color: black;
+  margin-top: 7rem;
 }
 .story-wrapper-dark {
   position: relative;
   display: flex;
   flex-direction: column;
   color: white;
+  margin-top: 7rem;
 }
 .story-title {
   font-size: 3.75rem;
@@ -76,6 +78,7 @@
   border-radius: 2rem;
   display: flex;
   width: 75%;
+  box-sizing: border-box;
 }
 .myself-card-dark {
   padding: 1.5rem 2rem;
@@ -85,6 +88,7 @@
   border-radius: 2rem;
   display: flex;
   width: 75%;
+  box-sizing: border-box;
 }
 .myself-card-dark p {
   color: #94a3b8;
@@ -100,7 +104,7 @@
   object-fit: cover;
   margin: auto;
 }
-.spacer-div {
+.spacer-div-story {
   margin-top: 14rem;
 }
 /* Style Funfact */
@@ -222,4 +226,56 @@
 }
 .front .inner p {
   position: relative;
+}
+
+/* Responsive Mobile */
+@media only screen and (max-width: 739px){
+  .story-wraper, .story-wrapper-dark {
+    margin-top: 4rem;
+  }
+  .story-title, .story-title-dark {
+    font-size: 2rem;
+  }
+  .globe, .globe-dark {
+    display: none;
+  }
+  .story-content-text {
+    width: 100%;
+  }
+  .myself-card, .myself-card-dark {
+    width: 100%;
+  }
+  .myself-card > img, .myself-card-dark > img {
+    display: none;
+  }
+  .my-hobbies {
+    width: 100%;
+  }
+  .my-hobbies > h2 {
+    font-size: 1.5rem;
+  }
+  .my-hobbies > p {
+    color: #535455;
+    font-size: 1.2rem;
+  }
+  .spacer-div-story {
+    margin-top: 5rem;
+  }
+  .funfact-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .funfact-col {
+    width: 100%;
+  }
+}
+/* Responsive Tablet */
+@media only screen and (min-width: 740px) and (max-width: 1200px){
+  .myself-card, .myself-card-dark {
+    margin-top: 1rem;
+    width: 100%;
+  }
+  .funfact-col {
+    width: calc(33.33% - 2rem);
+  }
 }

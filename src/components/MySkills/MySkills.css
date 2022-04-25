@@ -48,10 +48,9 @@
 .skill-cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 2rem;
+  gap: 1rem;
   grid-column: span 3/span 3;
   /* row-gap: 2.5rem; */
-
 }
 .skill-card {
   display: flex;
@@ -63,7 +62,8 @@
   top: 0;
   width: 100%;
   height: 100%;
-  padding: 4px 2px;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 .skill-card-light {
   border: var(--skill-border);
@@ -105,6 +105,7 @@
   margin-top: 0;
   list-style: none;
   gap: 1rem;
+  box-sizing: border-box;
 }
 .ability-card {
   display: flex;
@@ -133,4 +134,47 @@
 }
 .ability-card-dark:hover {
   filter: brightness(120%);
+}
+/* Responsive Mobile */
+@media only screen and (max-width: 739px){
+  .mySkills {
+    margin-top: 2rem;
+  }
+  .skill-title, .skill-title-dark {
+    font-size: 2rem;
+  }
+  .skill-wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .skill-cards {
+    display: grid;
+    grid-column: span 5/span 5;
+    gap: 0.5rem;
+  }
+  .skill-card .card p {
+    font-size: .875rem;
+    margin-bottom: 0;
+  }
+  .abilities-wrapper {
+    grid-column: span 5/span 5;
+    padding: 0;
+  }
+}
+/* Responsive Tablet */
+@media only screen and (min-width: 740px) and (max-width: 1200px){
+  .skill-wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .skill-cards {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    grid-column: span 2/span 2;
+    gap: 0.5rem;
+  }
+  .abilities-wrapper {
+    grid-column: span 3/span 3;
+    padding: 0;
+  }
 }

@@ -54,50 +54,21 @@ body {
 .app-theme-dark {
   background-color: var(--bg-color-dark);
 }
-
-.button {
-  font-family: "Gumela";
-  border-radius: 34px;
-  border: 3px solid white;
-  color: white;
-  font-size: 16px;
-  padding: 11px 26px;
-  background: transparent;
-  transition: 0.3s;
+/* Responsive Mobile */
+@media only screen and (max-width: 739px){
+  .App {
+    padding: 0.5rem 2rem;
+  }
 }
-.button::after {
-  transition: 0.3s;
-  height: 3px;
-  z-index: 10;
-  backface-visibility: hidden;
-  background-color: white;
+/* Responsive Tablet */
+@media only screen and (min-width: 740px) and (max-width: 1200px){
+  .App {
+    padding: 0.5rem 2rem;
+  }
 }
-.button::after {
-  height: 120%;
-  left: -10%;
-  transform: skewX(15deg);
-  z-index: -1;
+/* Responsive Laptop */
+@media only screen and (min-width: 1201px) and (max-width: 1440px){
+  .App {
+    padding: 0.5rem 12rem;
+  }
 }
-.button:hover::after {
-  width: 100%;
-  left: 0;
-}
-
-.button:hover {
-  cursor: pointer;
-  color: black;
-}
-/* .stripes {
-  position: absolute;
-  width: 100%;
-  height: 830px;
-  top: 0;
-  left: 0;
-  z-index: -10;
-  overflow: hidden;
-  transform-origin: 0;
-  transform: skewY(-12deg);
-}
-.theme-light {
-  background: var(--nav-color-main) ;
-} */

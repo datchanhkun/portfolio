@@ -1,8 +1,8 @@
 .intro {
   display: flex;
-  height: 68vh;
   margin-top: 6rem;
   z-index: 2;
+  position: relative;
 }
 .intro-left {
   display: flex;
@@ -148,20 +148,65 @@
   content: "";
   transition: 0.3s;
   background-color: white;
-  height: 100%;
+  height: 102%;
   position: absolute;
   transform-origin: left;
   z-index: -5;
   width: 0;
   bottom: 0;
-  left: 0;
+  left: -2px;
+  right: 0;
+  top: 0;
 }
 .intro-button:hover::after {
-  width: 100%;
-  left: 0;
+  width: 101%;
+  left: -1px;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 .intro-button:hover {
   color: black;
   cursor: pointer;
   z-index: 0;
+}
+/* Responsive Mobile */
+@media only screen and (max-width: 739px){
+  .intro {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  .intro-name>:nth-child(1) {
+    color: white;
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+  .intro-job {
+    margin-bottom: 2rem;
+  }
+  .intro-right, .intro-right-dark {
+    text-align: center;
+  }
+  .intro-right>img{
+    height: auto;
+    width: 100%;
+  }
+  .intro-right-dark>img{
+    height: auto;
+    width: 100%;
+  }
+}
+/* Responsive Tablet */
+@media only screen and (min-width: 740px) and (max-width: 1200px){
+  .intro-right>img{
+    height: auto;
+    width: 100%;
+  }
+  .intro-right-dark>img{
+    height: auto;
+    width: 100%;
+  }
 }
