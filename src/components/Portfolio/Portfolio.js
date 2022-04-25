@@ -70,7 +70,7 @@ const Portfolio = () => {
           <span>O</span>
         </div>
       </div>
-      <div className='spacer-div'></div>
+      <div className='portfolio-spacer-div'></div>
     </div>
   )
 }
