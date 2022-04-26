@@ -22,7 +22,7 @@ const Intro = () => {
             <span className='intro-name-welcome' >
               <span>Hi! </span>
               <span data-aos="fade-right" > I am </span>
-              <span data-aos="fade-right" data-aos-delay="300">Cao Thanh Dat 👋 </span>
+              <span data-aos="fade-right" data-aos-delay="300">Cao Thanh Dat 👋</span>
             </span>
             <span data-aos="fade-up" data-aos-easing="ease-in" data-aos-duration="1500">Welcome to my personal website!</span>
             <span data-aos="fade-up" data-aos-easing="ease-in" data-aos-duration="1500">I enjoy building software that makes people's lives easier by writing elegant, performant, and maintainable frontend code.</span>

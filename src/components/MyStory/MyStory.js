@@ -50,7 +50,7 @@ const MyStory = () => {
         <img src={Music} alt="music" />
       </div>
       <div className="spacer-div-story"></div>
-      <div className="funfact-wrapper" data-aos="slide-up" data-aos-duration="1500">
+      <div className="funfact-wrapper" data-aos="slide-up" data-aos-duration="1000">
         <div className="funfact-title">
           <span>Random fun facts about me</span>
         </div>

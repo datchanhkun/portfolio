@@ -39,7 +39,7 @@ const Projects = (props) => {
               ))}
             </div>
             <div className={`project-buttons ${darkMode ? '' : 'project-buttons-dark'}`}>
-              <a href='##' className={p.github === '' ? 'disabled-wrapper' : 'externalLinkButton-wrapper'}>
+              <a href='##' className={p.github === '' ? 'disabled-wrapper' : darkMode ? 'externalLinkButton-wrapper' : 'externalLinkButton-wrapper-dark'}>
                 <button className={`${p.github === '' ? 'disabled-button' : darkMode ? 'externalLinkButton-button' : 'externalLinkButton-buttonDark'}`}>
                   <span className='externalLinkButton-buttonContent'>
                     View source
@@ -49,7 +49,7 @@ const Projects = (props) => {
                   </span>
                 </button>
               </a>
-              <a href='##' className={p.domain === '' ? 'disabled-wrapper' : 'externalLinkButton-wrapper'}>
+              <a href='##' className={p.domain === '' ? 'disabled-wrapper' : darkMode ? 'externalLinkButton-wrapper' : 'externalLinkButton-wrapper-dark'}>
                 <button className={`${p.domain === '' ? 'disabled-button' : darkMode ? 'externalLinkButton-button' : 'externalLinkButton-buttonDark'}`}>
                   <span className='externalLinkButton-buttonContent'>
                     Visit Website

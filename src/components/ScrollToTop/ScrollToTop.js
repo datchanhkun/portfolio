@@ -3,7 +3,10 @@ import './ScrollToTop.css'
 import arrowUp from '../../assets/images/arrowUp.png'
 import { useWindowScroll } from 'react-use'
 import { themeContext } from '../../Context'
+import smoothscroll from 'smoothscroll-polyfill'
 const ScrollToTop = () => {
+  // kick off the polyfill!
+  smoothscroll.polyfill();
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
 

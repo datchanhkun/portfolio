@@ -100,11 +100,19 @@
   border: 1px solid var(--external-btn-border);
   padding: 0.5rem 0.75rem;
   text-decoration: none;
+  color: black;
+}
+.externalLinkButton-wrapper-dark {
+  border: 1px solid var(--external-btn-border);
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+  color: white;
 }
 .externalLinkButton-button {
   cursor: pointer;
   background-color: initial;
   border: none;
+  color: black;
 }
 .externalLinkButton-buttonDark {
   cursor: pointer;
@@ -151,6 +159,7 @@
   pointer-events: none;
   border: 1px solid var(--external-btn-border);
   padding: 0.5rem 0.75rem;
+  color: grey;
 }
 .disabled-button {
   color: grey;
