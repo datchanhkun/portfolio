@@ -8,7 +8,7 @@
   background-image: url('../../assets/images/gradient2.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 900px;
+  height: auto;
   width: screen;
   z-index: -10;
   overflow-x: hidden;
@@ -128,7 +128,9 @@
   grid-template-columns: repeat(5,minmax(0,1fr));
   gap: 1rem;
   align-items: center;
+  padding-bottom: 2rem;
 }
+
 .contact-icon .icon {
   position: relative;
 
@@ -222,11 +224,15 @@
   background-color: #3755ff;
   color: white;
 }
+.mg-success {
+  font-size: .875rem;
+  text-align: center;
+  background-color: #2dfd37;
+  border-radius: 1rem;
+  padding: 2px 0;
+}
 /* Responsive Mobile */
 @media only screen and (max-width: 739px){
-  .contact-wrapper {
-    height: auto;
-  }
   .contact-content {
     padding: 0.5rem 2rem;
   }
@@ -240,15 +246,9 @@
     width: 100%;
     margin: auto;
   }
-  .contact-info {
-    padding-bottom: 2rem;
-  }
 }
 /* Responsive Tablet */
 @media only screen and (min-width: 740px) and (max-width: 1200px){
-  .contact-wrapper {
-    height: auto;
-  }
   .contact-content {
     padding: 0.5rem 2rem;
   }
@@ -258,8 +258,5 @@
   .contact-form-wrapper {
     width: 80%;
     margin: auto;
-  }
-  .contact-info {
-    padding-bottom: 2rem;
   }
 }
