@@ -4,7 +4,8 @@ import 'aos/dist/aos.css'
 import './Projects.css'
 import { projects } from '../../data'
 import { themeContext } from '../../Context'
-const Projects = () => {
+const Projects = (props) => {
+  const {refScroll} = props;
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
   useEffect(() => {
@@ -14,7 +15,7 @@ const Projects = () => {
     AOS.refresh();
   }, []);
   return (
-    <div className='projects-wrapper'>
+    <div className='projects-wrapper' ref={refScroll}>
       <div className='projects-title' data-aos="flip-right" data-aos-duration="2000">
         Recent Projects
       </div>

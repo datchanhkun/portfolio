@@ -3,7 +3,8 @@ import './Navbar.css'
 import toogleSun from '../../assets/images/sun.svg'
 import toogleMoon from '../../assets/images/moon.svg'
 import { themeContext } from '../../Context'
-const Navbar = () => {
+const Navbar = (props) => {
+  const {gotoSkills, gotoProjects, gotoContact} = props
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
 
@@ -22,13 +23,13 @@ const Navbar = () => {
               <a href='#blog' className='underlined'>Blog</a>
             </li>
             <li>
-              <a href='#portfolio' className='underlined'>Portfolio</a>
+              <a onClick={gotoSkills} href='#portfolio' className='underlined'>Portfolio</a>
             </li>
             <li>
-              <a href='#projects' className='underlined'>Projects</a>
+              <a onClick={gotoProjects} href='#projects' className='underlined'>Projects</a>
             </li>
             <li>
-              <a href='#contact' className='underlined'>Contact</a>
+              <a onClick={gotoContact} href='#contact' className='underlined'>Contact</a>
             </li>
           </ul>
         </div>

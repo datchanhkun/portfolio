@@ -2,7 +2,8 @@ import React, { useContext, useRef, useState } from 'react'
 import './Contact.css'
 import { themeContext } from '../../Context'
 import emailjs from '@emailjs/browser'
-const Contact = () => {
+const Contact = (props) => {
+  const {refScroll} = props;
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
   const form = useRef();
@@ -27,7 +28,7 @@ const Contact = () => {
   return (
     <>
     <div className={`space-div-contact ${darkMode ? '' : 'div-dark'}`}></div>
-      <div className={`contact-wrapper ${darkMode ? '' : 'contact-dark'}`}>
+      <div ref={refScroll} className={`contact-wrapper ${darkMode ? '' : 'contact-dark'}`}>
       <div className='contact'>
         <div className='contact-content'>
           <svg viewBox="0 0 900 110" className="contact-title"><text textAnchor="middle" x="50%" y="90%" >Contact Me</text></svg>

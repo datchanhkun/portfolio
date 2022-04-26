@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useRef } from 'react'
 import './App.css';
 import Intro from './components/Intro/Intro';
 import MyStory from './components/MyStory/MyStory';
@@ -8,22 +8,34 @@ import MySkills from './components/MySkills/MySkills'
 import Projects from './components/Projects/Projects'
 import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
+import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 import { themeContext } from './Context'
 function App() {
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
+
+  // Portfolio navbar
+  const ScrollToSkills = useRef(null)
+  const gotoSkills = () => window.scrollTo({top: ScrollToSkills.current.offsetTop, behavior: 'smooth'})
+  // Projects Navbar
+  const ScrollToProjects = useRef(null)
+  const gotoProjects = () => window.scrollTo({top: ScrollToProjects.current.offsetTop, behavior: 'smooth'})
+  // Contact Navbar
+  const ScrollToContact = useRef(null)
+  const gotoContact = () => window.scrollTo({top: ScrollToContact.current.offsetTop, behavior: 'smooth'})
   return (
     <>
       <div className={`App ${darkMode ? '' : 'app-theme-dark'}`}>
-        <Navbar />
+        <Navbar gotoSkills={gotoSkills} gotoProjects={gotoProjects} gotoContact={gotoContact} />
         <Intro />
         <MyStory />
         <Portfolio />
-        <MySkills />
-        <Projects/>
+        <MySkills refScroll={ScrollToSkills} />
+        <Projects refScroll={ScrollToProjects}/>
       </div>
-      <Contact />
+      <Contact refScroll={ScrollToContact} />
       <Footer />
+      <ScrollToTop />
     </>
 
   );
