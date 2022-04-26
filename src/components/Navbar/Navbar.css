@@ -16,6 +16,12 @@
   font-weight: bold;
   color: white;
 }
+.nav-name > a{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
 
 .nav-list {
   flex: 10;

@@ -15,7 +15,11 @@ const Navbar = (props) => {
     <>
       <div className='nav-wrapper'>
         <div className='nav-logo'>
-          <div className='nav-name'>Thanh Dat Dev</div>
+          <div className='nav-name'>
+            <a href='/'>
+              Thanh Dat Dev
+            </a>
+          </div>
         </div>
         <div className='nav-list'>
           <ul>
