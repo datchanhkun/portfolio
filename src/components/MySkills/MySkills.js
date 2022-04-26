@@ -5,7 +5,8 @@ import './MySkills.css'
 import Eclipse from '../../assets/images/Eclipse.svg'
 import { skillList, abilitiesSkill } from '../../data'
 import { themeContext } from '../../Context'
-const MySkills = () => {
+const MySkills = (props) => {
+  const {refScroll} = props;
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
   useEffect(() => {
@@ -16,7 +17,7 @@ const MySkills = () => {
     AOS.refresh();
   }, []);
   return (
-    <div className='mySkills'>
+    <div className='mySkills' ref={refScroll}>
       <div className='skills-container'>
         <img src={Eclipse} alt='Eclipse' className='eclipse' />
         <span className={darkMode ? 'skill-title' : 'skill-title-dark'} >
