@@ -4,6 +4,7 @@ import 'aos/dist/aos.css'
 import './Intro.css';
 import Avatar from '../../assets/images/avatar.png'
 import { themeContext } from '../../Context'
+import CV from '../../assets/files/CV_CaoThanhDat.pdf'
 const Intro = () => {
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
@@ -37,9 +38,11 @@ const Intro = () => {
             </div>
 
           </div>
-          <button className='intro-button' data-aos="fade-up" data-aos-easing="ease-in" data-aos-duration="1500">
-            Download My Resume
-          </button>
+          <a href={CV} download >
+            <button className='intro-button' data-aos="fade-up" data-aos-easing="ease-in" data-aos-duration="1500">
+              Download My Resume
+            </button>
+          </a>
         </div>
         <div className={darkMode ? 'intro-right' : 'intro-right-dark'}>
             <img src={Avatar} alt='Avatar' />

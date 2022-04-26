@@ -1,9 +1,29 @@
-import React, { useContext } from 'react'
+import React, { useContext, useRef, useState } from 'react'
 import './Contact.css'
 import { themeContext } from '../../Context'
+import emailjs from '@emailjs/browser'
 const Contact = () => {
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
+  const form = useRef();
+  const [result, showResult] = useState(false);
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_l9dbi0q', 'template_s7wdkff', form.current, 'gY1Z_VgErVxtXMA8n')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+
+    e.target.reset();
+    showResult(true);
+  };
+
+  setTimeout(() => {
+    showResult(false)
+  }, 5000)
   return (
     <>
     <div className={`space-div-contact ${darkMode ? '' : 'div-dark'}`}></div>
@@ -13,7 +33,7 @@ const Contact = () => {
           <svg viewBox="0 0 900 110" className="contact-title"><text textAnchor="middle" x="50%" y="90%" >Contact Me</text></svg>
           <div className='contact-div-space'></div>
           <div className='contact-form-wrapper'>
-            <form className={`contact-form ${darkMode ? 'form-light' : 'form-dark'}`}>
+            <form ref={form} onSubmit={sendEmail} className={`contact-form ${darkMode ? 'form-light' : 'form-dark'}`}>
               <label>Your name</label>
               <input type='text' name='name' required/>
               <label>Your email</label>
@@ -23,6 +43,10 @@ const Contact = () => {
               <label>Your message</label>
               <textarea name='message' rows='4' required/>
               <button type='submit'>Send</button>
+              {result ? (
+                <p className='mg-success'>Your message has been successfully sent. I will contact you soon!</p>
+              ) : null}
+              
             </form>
           </div>
           <div className='contact-info'>
