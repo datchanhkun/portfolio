@@ -52,10 +52,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 4rem;
   margin-right: 4rem;
   list-style: none;
   color: white;
+}
+.nav-list ul > * + * {
+  margin-left: 4rem;
 }
 
 .nav-list > ul > li > a:hover {

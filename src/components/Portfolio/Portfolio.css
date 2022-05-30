@@ -31,9 +31,12 @@
           justify-content: center;
   padding: 30px;
   font-size: 2.5rem;
-  gap: 2rem;
+  /* gap: 2rem; */
   font-weight: 300;
   height: 100%;
+}
+.portfolio-intro-text > * + * {
+  margin-left: 2rem;
 }
 
 /* Title Floating */
