@@ -1,15 +1,25 @@
 .nav-wrapper {
   height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   z-index: 2;
 }
 
 .nav-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .nav-name {
   font-size: 1.5rem;
@@ -24,13 +34,23 @@
 }
 
 .nav-list {
-  flex: 10;
+  -webkit-box-flex: 10;
+      -ms-flex: 10;
+          flex: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-weight: normal;
 }
 .nav-list>ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 4rem;
   margin-right: 4rem;
@@ -54,9 +74,17 @@
   content: "";
   background: var(--navbar-color);
   height: 2px;
-  transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.25s ease;
+  transition: -webkit-transform 0.25s ease;
+  -o-transition: transform 0.25s ease;
   transition: transform 0.25s ease;
-  transform-origin: left;
+  transition: transform 0.25s ease, -webkit-transform 0.25s ease;
+  -webkit-transform-origin: left;
+      -ms-transform-origin: left;
+          transform-origin: left;
   left: 0;
   bottom: -1px;
   width: 100%;
@@ -65,28 +93,44 @@
 }
 .underlined:hover::after {
   background-color: var(--navbar-color);
-  transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+          transform: scaleX(1);
 }
 .btn-toogle {
   background-color: #0dcfff;
-  box-shadow: 0px 0px 23px #23d6eeee, 0px 0px 30px #1fa2ff7c, inset 5px 5px 5px #1fa2ffc4, inset -5px -5px 10px #1fa2ff7c;
+  -webkit-box-shadow: 0px 0px 23px #23d6eeee, 0px 0px 30px #1fa2ff7c, inset 5px 5px 5px #1fa2ffc4, inset -5px -5px 10px #1fa2ff7c;
+          box-shadow: 0px 0px 23px #23d6eeee, 0px 0px 30px #1fa2ff7c, inset 5px 5px 5px #1fa2ffc4, inset -5px -5px 10px #1fa2ff7c;
   width: 70px;
   height: 70px;
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: none
 }
 .btn-toogle-dark {
   background-color: #0f7fac83;
-  box-shadow: 0px 0px 23px #168ebdbb, 0px 0px 23px #117096af, inset 5px 5px 4px #117096af, inset -5px -5px 4px #1478a08e;
+  -webkit-box-shadow: 0px 0px 23px #168ebdbb, 0px 0px 23px #117096af, inset 5px 5px 4px #117096af, inset -5px -5px 4px #1478a08e;
+          box-shadow: 0px 0px 23px #168ebdbb, 0px 0px 23px #117096af, inset 5px 5px 4px #117096af, inset -5px -5px 4px #1478a08e;
   width: 70px;
   height: 70px;
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: none
 }
 .btn-toogle-dark > img {
@@ -113,8 +157,12 @@
   left: 0;
   /* z-index: -10; */
   overflow: hidden;
-  transform-origin: 0;
-  transform: skewY(-12deg);
+  -webkit-transform-origin: 0;
+      -ms-transform-origin: 0;
+          transform-origin: 0;
+  -webkit-transform: skewY(-12deg);
+      -ms-transform: skewY(-12deg);
+          transform: skewY(-12deg);
 }
 .theme-light {
   background: var(--nav-color-main) !important;
@@ -139,20 +187,26 @@
   }
   .stripes {
     height: 740px;
-    transform: skewY(-16deg);
+    -webkit-transform: skewY(-16deg);
+        -ms-transform: skewY(-16deg);
+            transform: skewY(-16deg);
   }
 }
 /* Responsive Macbook 13inch */
 @media only screen and (min-width: 1201px) and (max-width: 1300px){
   .stripes {
     height: 740px;
-    transform: skewY(-14deg);
+    -webkit-transform: skewY(-14deg);
+        -ms-transform: skewY(-14deg);
+            transform: skewY(-14deg);
   }
 }
 /* Responsive Tablet Mini 2*/
 @media only screen and (min-width: 740px) and (max-width: 889px){
   .stripes {
     height: 950px;
-    transform: skewY(-16deg);
+    -webkit-transform: skewY(-16deg);
+        -ms-transform: skewY(-16deg);
+            transform: skewY(-16deg);
   }
 }

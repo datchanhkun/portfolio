@@ -21,17 +21,36 @@
 .scroll-icon {
   width: 80%;
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: scrollTop 0.5s alternate ease infinite;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: scrollTop 0.5s alternate ease infinite;
+          animation: scrollTop 0.5s alternate ease infinite;
+}
+@-webkit-keyframes scrollTop {
+  from {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+  }
+  to {
+    -webkit-transform: translateY(-1px);
+            transform: translateY(-1px);
+  }
 }
 @keyframes scrollTop {
   from {
-    transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
   }
   to {
-    transform: translateY(-1px);
+    -webkit-transform: translateY(-1px);
+            transform: translateY(-1px);
   }
 }
 /* Responsive Tablet */

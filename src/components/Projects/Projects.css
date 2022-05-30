@@ -1,6 +1,11 @@
 .projects-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 16rem;
 }
 .projects-wrapper p {
@@ -12,21 +17,29 @@
   line-height: normal;
   text-align: center;
   color: #0000;
-  background-clip: text;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-image: -webkit-gradient( linear, left top, right top, from(rgba(94, 114, 235, 1)), color-stop(56%, rgba(255, 145, 144, 1)), to(rgba(254, 193, 149, 1)) );
+  background-image: -o-linear-gradient( left, rgba(94, 114, 235, 1) 0%, rgba(255, 145, 144, 1) 56%, rgba(254, 193, 149, 1) 100% );
   background-image: linear-gradient( 90deg, rgba(94, 114, 235, 1) 0%, rgba(255, 145, 144, 1) 56%, rgba(254, 193, 149, 1) 100% );
   margin-bottom: 2rem;
 }
 
 .projects-cards {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: minmax(0,1fr);
   grid-template-columns: repeat(1,minmax(0,1fr));
   gap: 2.5rem;
   z-index: 10;
 }
 .project-card {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: minmax(0,1fr) 2.5rem minmax(0,1fr);
   grid-template-columns: repeat(2,minmax(0,1fr));
   padding: 2rem;
+  background-image: -o-linear-gradient(330deg, #81d0ec, #b1dbe9);
   background-image: linear-gradient(120deg, #81d0ec, #b1dbe9);
   background-size: cover;
   gap: 2.5rem;
@@ -34,19 +47,33 @@
 .project-card-img {
   width: 100%;
   height: 22rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .project-card-img-dark {
-  filter: brightness(85%);
+  -webkit-filter: brightness(85%);
+          filter: brightness(85%);
 }
 .project-card-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .project-intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 0.5rem;
 }
 .project-intro .project-title {
@@ -72,12 +99,21 @@
   color: hsla(0,100%,97%,.808);;
 }
 .project-frameworks {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .project-frameworks .framework {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .project-frameworks .framework .text-projecs-arrow {
   width: 1.25rem;
@@ -88,8 +124,12 @@
   font-size: 15px;
 }
 .project-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: .875rem;
   gap: 1rem;
 }
@@ -126,12 +166,18 @@
   -webkit-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
 }
 .arrow-animation {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .externalLinkButton-Icon {
   position: absolute;
@@ -139,8 +185,12 @@
   -webkit-transition-property: all;
   -o-transition-property: all;
   -moz-transition-property: all;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-out;
+  -webkit-transition-duration: 0.2s;
+       -o-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+       -o-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
   opacity: 0;
   left: 0rem;
 }
@@ -175,12 +225,18 @@
     font-size: 2.5rem;
   }
   .project-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .project-card-img {
     height: auto;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 /* Responsive Mobile Small 2 */
