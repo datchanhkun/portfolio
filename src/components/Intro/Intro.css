@@ -17,7 +17,7 @@
 .intro-name>:nth-child(1) {
   color: white;
   font-weight: bold;
-  font-size: 3.5rem;
+  font-size: 2.7rem;
   margin-bottom: 2rem;
 }
 .intro-name>:nth-child(2) {
@@ -179,16 +179,7 @@
     margin-top: 3rem;
   }
   .intro-name>:nth-child(1) {
-    color: white;
-    font-weight: bold;
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-  }
-  .intro-name>:nth-child(2) {
-    font-size: 1.125rem;
-  }
-  .intro-name>:nth-child(3) {
-    font-size: 1.125rem;
+    font-size: 2.5rem;
   }
   .intro-job {
     margin-bottom: 2rem;
@@ -205,23 +196,67 @@
     width: 100%;
   }
 }
+/* Responsive Mobile Small */
+@media only screen and (max-width: 503px){
+  .intro-name>:nth-child(1) {
+    font-size: 1.8rem;
+  }
+}
+/* Responsive Mobile Small 2 */
+@media only screen and (max-width: 384px){
+  .intro-name>:nth-child(1) {
+    font-size: 1.4rem;
+  }
+  .intro-name>:nth-child(2) {
+    font-size: 1.125rem;
+  }
+  .intro-name>:nth-child(3) {
+    font-size: 1.125rem;
+  }
+  .intro-name>:nth-child(4) {
+    font-size: 1.125rem;
+  }
+}
 /* Responsive Tablet */
 @media only screen and (min-width: 740px) and (max-width: 1200px){
   .intro-name>:nth-child(1) {
     font-size: 2.5rem;
   }
-  .intro-right>img{
+}
+/* Responsive Tablet Mini */
+@media only screen and (min-width: 740px) and (max-width: 991px){
+  .intro-name>:nth-child(1) {
+    font-size: 2.2rem;
+  }
+  .intro-right>img, .intro-right-dark>img{
+    height: 26rem;
+  }
+}
+/* Responsive Tablet Mini 2*/
+@media only screen and (min-width: 740px) and (max-width: 889px){
+  .intro-name>:nth-child(1) {
+    font-size: 2.5rem;
+  }
+  .intro-right>img, .intro-right-dark>img{
     height: auto;
     width: 100%;
   }
-  .intro-right-dark>img{
-    height: auto;
-    width: 100%;
+  .intro {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 3rem;
   }
 }
 /* Responsive Laptop */
 @media only screen and (min-width: 1201px) and (max-width: 1440px){
   .intro-name>:nth-child(1) {
     font-size: 2.5rem;
+  }
+}
+/* Responsive Laptop */
+@media only screen and (min-width: 1600px){
+  .intro-name>:nth-child(1) {
+    font-size: 3.2rem;
   }
 }

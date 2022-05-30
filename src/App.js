@@ -10,6 +10,7 @@ import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 import { themeContext } from './Context'
+import Container from './components/Container/Container';
 function App() {
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
@@ -26,12 +27,14 @@ function App() {
   return (
     <>
       <div className={`App ${darkMode ? '' : 'app-theme-dark'}`}>
-        <Navbar gotoSkills={gotoSkills} gotoProjects={gotoProjects} gotoContact={gotoContact} />
-        <Intro />
-        <MyStory />
-        <Portfolio />
-        <MySkills refScroll={ScrollToSkills} />
-        <Projects refScroll={ScrollToProjects}/>
+        <Container>
+          <Navbar gotoSkills={gotoSkills} gotoProjects={gotoProjects} gotoContact={gotoContact} />
+          <Intro />
+          <MyStory />
+          <Portfolio />
+          <MySkills refScroll={ScrollToSkills} />
+          <Projects refScroll={ScrollToProjects}/>
+        </Container>
       </div>
       <Contact refScroll={ScrollToContact} />
       <Footer />

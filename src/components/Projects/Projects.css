@@ -183,6 +183,12 @@
     object-fit: cover;
   }
 }
+/* Responsive Mobile Small 2 */
+@media only screen and (max-width: 384px){
+  .projects-title {
+    font-size: 2rem;
+  }
+}
 /* Responsive Tablet */
 @media only screen and (min-width: 740px) and (max-width: 1200px){
   .projects-wrapper {

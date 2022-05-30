@@ -1,7 +1,7 @@
 .scroll-to-top {
   position: fixed;
-  bottom: 10px;
-  right: 5px;
+  bottom: 1.5rem;
+  right: 2rem;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -34,30 +34,9 @@
     transform: translateY(-1px);
   }
 }
-
-/* Responsive Mobile */
-@media only screen and (max-width: 739px){
-  .scroll-to-top {
-    position: fixed;
-    bottom: 12px;
-    right: 0;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    z-index: 10;
-    cursor: pointer;
-  }
-}
 /* Responsive Tablet */
 @media only screen and (min-width: 740px) and (max-width: 1200px){
   .scroll-to-top {
-    position: fixed;
-    bottom: 12px;
-    right: 0;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    z-index: 10;
-    cursor: pointer;
+    right: 1.5  rem;
   }
 }

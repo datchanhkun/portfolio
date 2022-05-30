@@ -112,7 +112,41 @@
 
 /* Responsive Mobile */
 @media only screen and (max-width: 739px){
-  .portfolio-wrapper {
-    display: none;
+  .spacer-div1 {
+    margin-top: 6rem;
+  }
+  .portfolio-intro-text {
+    font-size: 2rem;
+  }
+  .portfolio-floating {
+    z-index: 1;
+    font-size: 5rem;
+    font-weight: 800;
+    animation: floating 5s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+    margin-top: 6rem;
+  }
+  .portfolio-spacer-div {
+    height: 6rem;
+  }
+}
+
+/* Responsive Mobile Small 2 */
+@media only screen and (max-width: 384px){
+  .portfolio-intro-text {
+    font-size: 1.6rem;
+  }
+  .portfolio-floating {
+    font-size: 3.5rem;
+    margin-top: 3rem;
+  }
+}
+/* Responsive Mobile Small 2 */
+@media only screen and (min-width: 385px) and (max-width: 429px){
+  .portfolio-intro-text {
+    font-size: 1.6rem;
+  }
+  .portfolio-floating {
+    font-size: 4rem;
+    margin-top: 3rem;
   }
 }
