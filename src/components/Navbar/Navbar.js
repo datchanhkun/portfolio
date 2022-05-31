@@ -1,19 +1,46 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './Navbar.css'
 import toogleSun from '../../assets/images/sun.svg'
 import toogleMoon from '../../assets/images/moon.svg'
 import { themeContext } from '../../Context'
+import { useWindowScroll } from 'react-use'
+import Container from '../Container/Container'
 const Navbar = (props) => {
   const {gotoSkills, gotoProjects, gotoContact} = props
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
 
+  const [openMenu, setOpenMenu] = useState(true)
+  const [scrolling, setScrolling] = useState(false)
+  const {y: pageYOffset } = useWindowScroll()
+
+
+  useEffect(() => {
+    if(pageYOffset > 0) {
+      setScrolling(true);
+    } else {
+      setScrolling(false);
+    }
+  },[pageYOffset])
+
+  const handleClickMenu = () => {
+    setOpenMenu(!openMenu);
+  }
+
   const changeDarkTheme = () => {
     theme.dispatch({type: 'toggle'})
   }
+
   return (
     <>
-      <div className='nav-wrapper'>
+      <div className={`nav-wrapper ${scrolling ? darkMode ? 'scrolling_light' : 'scrolling_dark' : ''}`}>
+        <Container>
+          <div className="nav-main">
+
+        <div className={`nav-hamburger ${openMenu ? '' : 'openMenu'}`} onClick={handleClickMenu}>
+          <div className='icon-left'></div>
+          <div className='icon-right'></div>
+        </div>
         <div className='nav-logo'>
           <div className='nav-name'>
             <a href='/'>
@@ -21,8 +48,8 @@ const Navbar = (props) => {
             </a>
           </div>
         </div>
-        <div className='nav-list'>
-          <ul>
+        <div className={`nav-list nav-mobile${openMenu ? '' : ' nav-mobile-active'}`}>
+          <ul onClick={handleClickMenu}>
             <li>
               <a href='#blog' className='underlined'>Blog</a>
             </li>
@@ -47,6 +74,8 @@ const Navbar = (props) => {
 
           </button>
         </div>
+        </div>
+        </Container>
       </div>
       <div className={`stripes ${darkMode ? 'theme-light' : 'theme-dark'}`}></div>
     </>

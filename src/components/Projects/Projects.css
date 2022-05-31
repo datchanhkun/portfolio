@@ -31,7 +31,6 @@
   -ms-grid-columns: minmax(0,1fr);
   grid-template-columns: repeat(1,minmax(0,1fr));
   gap: 2.5rem;
-  z-index: 10;
 }
 .project-card {
   display: -ms-grid;
