@@ -1,5 +1,5 @@
 .nav-wrapper {
-  height: 10vh;
+  height: 8vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -326,9 +326,9 @@
   .nav-wrapper {
     padding: 0rem 4rem;
   }
-  /* .nav-list {
-    display: none;
-  } */
+  .nav-mobile {
+    padding-left: 2rem;
+  }
   .stripes {
     height: 740px;
     -webkit-transform: skewY(-16deg);
