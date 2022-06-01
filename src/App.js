@@ -11,6 +11,7 @@ import Footer from './components/Footer/Footer'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 import { themeContext } from './Context'
 import Container from './components/Container/Container';
+import SoundMusic from './components/SoundMusic/SoundMusic';
 function App() {
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
@@ -39,6 +40,7 @@ function App() {
       <Contact refScroll={ScrollToContact} />
       <Footer />
       <ScrollToTop />
+      <SoundMusic />
     </>
 
   );

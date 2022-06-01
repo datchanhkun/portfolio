@@ -320,6 +320,9 @@
     width: 50px;
     height: 50px;
   }
+  .nav-toogle {
+    padding: 0.5rem 0;
+  }
 }
 /* Responsive Tablet */
 @media only screen and (min-width: 740px) and (max-width: 1200px){
