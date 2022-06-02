@@ -195,11 +195,13 @@
   opacity: 0;
   left: 0rem;
 }
-.externalLinkButton-wrapper:hover .externalLinkButton-Icon {
+.externalLinkButton-wrapper:hover .externalLinkButton-Icon,
+.externalLinkButton-wrapper-dark:hover .externalLinkButton-Icon {
   opacity: 1;
   left: 0.3rem;
 }
-.externalLinkButton-wrapper:hover .externalLinkButton-buttonContent {
+.externalLinkButton-wrapper:hover .externalLinkButton-buttonContent,
+.externalLinkButton-wrapper-dark:hover .externalLinkButton-buttonContent {
   transform: translate3d(-5px, 0, 0);
   -webkit-transform: translate3d(-5px, 0, 0);
   -o-transform: translate3d(-5px, 0, 0);

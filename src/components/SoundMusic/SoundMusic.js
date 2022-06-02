@@ -25,7 +25,7 @@ const SoundMusic = () => {
 
   return (
     <div className='sound-music'>
-      <div className='chooseOptions'>
+      <div className={`${darkMode ? 'chooseOptions' : 'chooseOptions_dark'}`}>
         {show ? (
           <img src={pauseSound} alt="pauseIcon" onClick={handleClickPause}/>
         ) : (
