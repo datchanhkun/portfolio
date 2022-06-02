@@ -4,9 +4,8 @@ import toogleSun from '../../assets/images/sun.svg'
 import toogleMoon from '../../assets/images/moon.svg'
 import { themeContext } from '../../Context'
 import { useWindowScroll } from 'react-use'
-import useSound from 'use-sound'
 import Container from '../Container/Container'
-import tickSound from '../../assets/audio/tick.wav'
+
 const Navbar = (props) => {
   const {gotoSkills, gotoProjects, gotoContact} = props
   const theme = useContext(themeContext)
@@ -16,7 +15,6 @@ const Navbar = (props) => {
   const [scrolling, setScrolling] = useState(false)
   const {y: pageYOffset } = useWindowScroll()
 
-  const [play] = useSound(tickSound);
 
   useEffect(() => {
     if(pageYOffset > 0) {
@@ -32,7 +30,6 @@ const Navbar = (props) => {
 
   const changeDarkTheme = () => {
     theme.dispatch({type: 'toggle'})
-    play()
   }
 
   return (
@@ -71,9 +68,9 @@ const Navbar = (props) => {
         <div className='nav-toogle'>
           <button className={darkMode ? 'btn-toogle' : 'btn-toogle-dark'} onClick={changeDarkTheme}>
             {darkMode ? (
-              <img src={toogleSun} alt="toogleSun"/>
+              <img src={toogleSun} alt="toogleSun" />
             ) : (
-              <img src={toogleMoon} alt="toogleMoon"/>
+              <img src={toogleMoon} alt="toogleMoon" />
             )}
 
           </button>
