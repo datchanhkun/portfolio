@@ -1,17 +1,20 @@
-import React, { useContext, useRef } from 'react'
-import './App.css';
-import Intro from './components/Intro/Intro';
-import MyStory from './components/MyStory/MyStory';
-import Navbar from './components/Navbar/Navbar';
-import Portfolio from './components/Portfolio/Portfolio'
-import MySkills from './components/MySkills/MySkills'
-import Projects from './components/Projects/Projects'
-import Contact from './components/Contact/Contact'
-import Footer from './components/Footer/Footer'
-import ScrollToTop from './components/ScrollToTop/ScrollToTop'
+import React, { Suspense, useContext, useRef } from 'react'
+import './App.css'
+import Navbar from './components/Navbar/Navbar'
+import Loading from './components/Loading/Loading'
 import { themeContext } from './Context'
-import Container from './components/Container/Container';
-import SoundMusic from './components/SoundMusic/SoundMusic';
+
+const Intro = React.lazy(() => import('./components/Intro/Intro'))
+const MyStory = React.lazy(() => import('./components/MyStory/MyStory'))
+const Portfolio = React.lazy(() => import('./components/Portfolio/Portfolio'))
+const MySkills = React.lazy(() => import('./components/MySkills/MySkills'))
+const Projects = React.lazy(() => import('./components/Projects/Projects'))
+const Contact = React.lazy(() => import('./components/Contact/Contact'))
+const Footer = React.lazy(() => import('./components/Footer/Footer'))
+const ScrollToTop = React.lazy(() => import('./components/ScrollToTop/ScrollToTop'))
+const SoundMusic = React.lazy(() => import('./components/SoundMusic/SoundMusic'))
+const Container = React.lazy(() => import('./components/Container/Container'))
+
 function App() {
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
@@ -26,8 +29,9 @@ function App() {
   const ScrollToContact = useRef(null)
   const gotoContact = () => window.scrollTo({top: ScrollToContact.current.offsetTop, behavior: 'smooth'})
   return (
-    <>
+    <Suspense fallback={<Loading />}>
       <div className={`App ${darkMode ? '' : 'app-theme-dark'}`}>
+
         <Container>
           <Navbar gotoSkills={gotoSkills} gotoProjects={gotoProjects} gotoContact={gotoContact} />
           <Intro />
@@ -41,7 +45,8 @@ function App() {
       <Footer />
       <ScrollToTop />
       <SoundMusic />
-    </>
+
+    </Suspense>
 
   );
 }
