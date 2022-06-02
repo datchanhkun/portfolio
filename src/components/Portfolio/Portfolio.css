@@ -7,7 +7,6 @@
 
 .portfolio-intro-svg {
   position: absolute;
-  mix-blend-mode: screen;
   overflow: visible !important;
   /* z-index: -10; */
   -webkit-user-select: none;
