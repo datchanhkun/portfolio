@@ -16,6 +16,13 @@
   height: 30px;
   cursor: pointer;
 }
+.chooseOptions_dark img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: white;
+  padding: 4px;
+}
 .chooseContent {
   width: 100%;
   height: 100%;
@@ -57,15 +64,5 @@
 @media only screen and (min-width: 740px) and (max-width: 1200px){
   .sound-music {
     left: 1rem;
-  }
-}
-/* Responsive Mobile */
-@media only screen and (max-width: 739px){
-  .chooseOptions_dark img {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: white;
-    padding: 4px;
   }
 }
