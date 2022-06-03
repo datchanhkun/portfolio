@@ -210,19 +210,12 @@
           flex: 1;
   z-index: 2;
 }
-.intro-right>img{
+.intro-right>img, .intro-right-dark>img{
   height: 30rem;
   outline: 1px solid #fff;
   outline-offset: calc(-9px);
   -webkit-box-shadow: 5px 5px 30px 20px rgba(236, 222, 90, 0.42);
           box-shadow: 5px 5px 30px 20px rgba(236, 222, 90, 0.42);
-}
-.intro-right-dark>img{
-  height: 30rem;
-  outline: 1px solid #fff;
-  outline-offset: calc(-9px);
-  -webkit-box-shadow: none;
-          box-shadow: none;
 }
 /* Animation for button */
 .intro-button {

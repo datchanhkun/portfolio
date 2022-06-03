@@ -18,7 +18,7 @@ const MyStory = () => {
     AOS.refresh();
   }, []);
   return (
-    <div className={darkMode ? "story-wraper" : "story-wrapper-dark"}>
+    <div className={`story-wraper ${darkMode ? "" : "story-wrapper-dark"}`}>
       <span className={darkMode ? "story-title" : "story-title-dark"}>My Story</span>
       <div className="story-content">
         <p className="story-content-text">
@@ -36,7 +36,7 @@ const MyStory = () => {
           )}
         </div>
       </div>
-      <div className={darkMode ? "myself-card" : "myself-card-dark"}>
+      <div className={`myself-card ${darkMode ? "myself-card-light" : "myself-card-dark"}`}>
         <div className="my-hobbies">
           <h2>A little bit about me</h2>
           <p>

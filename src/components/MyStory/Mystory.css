@@ -11,16 +11,7 @@
   margin-top: 7rem;
 }
 .story-wrapper-dark {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   color: white;
-  margin-top: 7rem;
 }
 .story-title {
   font-size: 3.75rem;
@@ -109,10 +100,6 @@
 /* Myselft Card */
 .myself-card {
   padding: 1.5rem 2rem;
-  background: var(--myself-card-bg);
-  -webkit-box-shadow: -0.25rem 0.75rem 2rem 0 var(--myself-card-shadow);
-          box-shadow: -0.25rem 0.75rem 2rem 0 var(--myself-card-shadow);
-  border: 2px solid var(--myself-card-border);
   border-radius: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -121,19 +108,17 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+.myself-card-light {
+  background: var(--myself-card-bg);
+  -webkit-box-shadow: -0.25rem 0.75rem 2rem 0 var(--myself-card-shadow);
+          box-shadow: -0.25rem 0.75rem 2rem 0 var(--myself-card-shadow);
+  border: 2px solid var(--myself-card-border);
+}
 .myself-card-dark {
-  padding: 1.5rem 2rem;
   background: var(--myself-card-bg-dark);
   -webkit-box-shadow: -0.25rem 0.75rem 2rem 0 var(--myself-card-shadow-dark);
           box-shadow: -0.25rem 0.75rem 2rem 0 var(--myself-card-shadow-dark);
   border: 2px solid var(--myself-card-border-dark);
-  border-radius: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 75%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 .myself-card-dark p {
   color: #94a3b8;
@@ -141,7 +126,7 @@
 .my-hobbies {
   width: 80%;
 }
-.myself-card > img, .myself-card-dark > img {
+.myself-card > img {
   max-width: 20%;
   width: 150px;
   height: 170px;
@@ -300,7 +285,7 @@
 
 /* Responsive Mobile */
 @media only screen and (max-width: 739px){
-  .story-wraper, .story-wrapper-dark {
+  .story-wraper {
     margin-top: 4rem;
   }
   .story-title, .story-title-dark {
@@ -312,10 +297,10 @@
   .story-content-text {
     width: 100%;
   }
-  .myself-card, .myself-card-dark {
+  .myself-card {
     width: 100%;
   }
-  .myself-card > img, .myself-card-dark > img {
+  .myself-card > img {
     display: none;
   }
   .my-hobbies {

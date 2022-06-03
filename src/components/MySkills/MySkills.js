@@ -21,15 +21,15 @@ const MySkills = (props) => {
       <div className='skills-container'>
         <img src={Eclipse} alt='Eclipse' className='eclipse' />
         <span className={darkMode ? 'skill-title' : 'skill-title-dark'} >
-          <span data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-duration="1000">M</span>
-          <span data-aos="fade-left" data-aos-delay="500" data-aos-easing="ease-in" data-aos-duration="1000">y</span>
+          <span data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-duration="500">M</span>
+          <span data-aos="fade-left" data-aos-delay="500" data-aos-easing="ease-in" data-aos-duration="500">y</span>
           <span>&nbsp;</span>
-          <span data-aos="fade-left" data-aos-delay="1000" data-aos-easing="ease-in" data-aos-duration="1000">S</span>
-          <span data-aos="fade-left" data-aos-delay="1500" data-aos-easing="ease-in" data-aos-duration="1000">k</span>
-          <span data-aos="fade-left" data-aos-delay="1800" data-aos-easing="ease-in" data-aos-duration="1000">i</span>
-          <span data-aos="fade-left" data-aos-delay="2200" data-aos-easing="ease-in" data-aos-duration="1000">l</span>
-          <span data-aos="fade-left" data-aos-delay="2600" data-aos-easing="ease-in" data-aos-duration="1000">l</span>
-          <span data-aos="fade-left" data-aos-delay="3000" data-aos-easing="ease-in" data-aos-duration="1000">s</span>
+          <span data-aos="fade-left" data-aos-delay="1000" data-aos-easing="ease-in" data-aos-duration="500">S</span>
+          <span data-aos="fade-left" data-aos-delay="1500" data-aos-easing="ease-in" data-aos-duration="500">k</span>
+          <span data-aos="fade-left" data-aos-delay="1800" data-aos-easing="ease-in" data-aos-duration="500">i</span>
+          <span data-aos="fade-left" data-aos-delay="2200" data-aos-easing="ease-in" data-aos-duration="500">l</span>
+          <span data-aos="fade-left" data-aos-delay="2600" data-aos-easing="ease-in" data-aos-duration="500">l</span>
+          <span data-aos="fade-left" data-aos-delay="3000" data-aos-easing="ease-in" data-aos-duration="500">s</span>
         </span>
         <div className='skill-wrapper'>
           <div className='skill-cards' data-aos="slide-up" data-aos-duration="1500">
@@ -42,7 +42,7 @@ const MySkills = (props) => {
               </div>
             ))}
           </div>
-          <ul className='abilities-wrapper' data-aos="fade-left" data-aos-duration="1500">
+          <ul className='abilities-wrapper' data-aos="slide-left" data-aos-duration="1500">
           {abilitiesSkill.map((ability, index) => (
             <li key={index}>
               <div className={`ability-card ${darkMode ? 'ability-card-light' : 'ability-card-dark'}`}>

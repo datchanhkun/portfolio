@@ -8,7 +8,6 @@
   height: -moz-fit-content;
   height: fit-content;
   position: relative;
-  z-index: 1;
 }
 .eclipse {
   position: absolute;

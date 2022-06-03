@@ -21,7 +21,7 @@ const Projects = (props) => {
       </div>
       <div className='projects-cards'>
         {projects.map((p) => (
-          <div className={`project-card ${darkMode ? '' : 'project-dark'}`} key={p.id} style={{backgroundImage: `${darkMode ? p.backgroundColorLight : p.backgroundColorDark}`}} data-aos="fade-up" data-aos-duration="1000">
+          <div className={`project-card ${darkMode ? '' : 'project-dark'}`} key={p.id} style={{backgroundImage: `${darkMode ? p.backgroundColorLight : p.backgroundColorDark}`}} data-aos="slide-up" data-aos-duration="700">
           <img src={p.img} alt='ood' className={`project-card-img ${darkMode ? '' : 'project-card-img-dark'}`} />
           <div className='project-card-content'>
             <div className='project-intro'>
