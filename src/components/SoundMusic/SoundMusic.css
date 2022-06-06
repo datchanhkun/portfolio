@@ -10,11 +10,11 @@
 }
 .chooseOptions, .chooseOptions_dark {
   animation: scale-icon 1s ease-out infinite;
+  cursor: pointer;
 }
 .chooseOptions img {
   width: 30px;
   height: 30px;
-  cursor: pointer;
 }
 .chooseOptions_dark img {
   width: 25px;

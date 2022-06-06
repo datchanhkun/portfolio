@@ -44,7 +44,7 @@ const Intro = () => {
             </button>
           </a>
         </div>
-        <div className={darkMode ? 'intro-right' : 'intro-right-dark'}>
+        <div className={`intro-right ${darkMode ? 'intro-right-light' : 'intro-right-dark'}`}>
             <img src={Avatar} alt='Avatar' />
         </div>
     </div>
