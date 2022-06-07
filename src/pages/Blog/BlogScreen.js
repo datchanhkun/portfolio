@@ -6,7 +6,7 @@ const BlogScreen = () => {
   return (
     <div className='blog-screen'>
       <Suspense fallback={<Loading />}>
-        <Navbar />
+        <Navbar bg={'black'}/>
 
       </Suspense>
     </div>
