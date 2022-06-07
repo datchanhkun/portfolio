@@ -45,30 +45,4 @@ body {
   font-size: 20px;
   margin: 0;
 }
-.App {
-  padding: 0.5rem 15rem;
-  overflow: hidden;
-  color: black;
-  position: relative;
-}
-.app-theme-dark {
-  background-color: var(--bg-color-dark);
-}
-/* Responsive Mobile */
-@media only screen and (max-width: 739px){
-  .App {
-    padding: 0.5rem 2rem;
-  }
-}
-/* Responsive Tablet */
-@media only screen and (min-width: 740px) and (max-width: 1200px){
-  .App {
-    padding: 0.5rem 4rem;
-  }
-}
-/* Responsive Laptop */
-@media only screen and (min-width: 1201px) and (max-width: 1440px){
-  .App {
-    padding: 0.5rem 10rem;
-  }
-}
+
