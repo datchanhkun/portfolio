@@ -8,7 +8,7 @@ import Container from '../Container/Container'
 import { Link } from 'react-router-dom'
 
 const Navbar = (props) => {
-  const {gotoSkills, gotoProjects, gotoContact} = props
+  const {gotoSkills, gotoProjects, gotoContact, bg} = props
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
 
@@ -34,7 +34,7 @@ const Navbar = (props) => {
   }
 
   return (
-    <div className={`nav-wrapper ${scrolling ? darkMode ? 'scrolling_light' : 'scrolling_dark' : ''}`}>
+    <div style={{background: bg}}className={`nav-wrapper ${scrolling ? darkMode ? 'scrolling_light' : 'scrolling_dark' : ''}`}>
       <Container>
         <div className="nav-main">
           <div className={`nav-hamburger ${openMenu ? '' : 'openMenu'}`} onClick={handleClickMenu}>

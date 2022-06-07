@@ -1,0 +1,17 @@
+.notFound-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.notFound-screen .btn-homepage {
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid gray;
+}
+.notFound-screen .btn-homepage .text-homepage {
+  text-decoration: none;
+  color: black;
+}
