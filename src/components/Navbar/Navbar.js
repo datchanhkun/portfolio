@@ -5,6 +5,7 @@ import toogleMoon from '../../assets/images/moon.svg'
 import { themeContext } from '../../Context'
 import { useWindowScroll } from 'react-use'
 import Container from '../Container/Container'
+import { Link } from 'react-router-dom'
 
 const Navbar = (props) => {
   const {gotoSkills, gotoProjects, gotoContact} = props
@@ -33,53 +34,48 @@ const Navbar = (props) => {
   }
 
   return (
-    <>
-      <div className={`nav-wrapper ${scrolling ? darkMode ? 'scrolling_light' : 'scrolling_dark' : ''}`}>
-        <Container>
-          <div className="nav-main">
-
-        <div className={`nav-hamburger ${openMenu ? '' : 'openMenu'}`} onClick={handleClickMenu}>
-          <div className='icon-left'></div>
-          <div className='icon-right'></div>
-        </div>
-        <div className='nav-logo'>
-          <div className='nav-name'>
-            <a href='/'>
-              Thanh Dat Dev
-            </a>
+    <div className={`nav-wrapper ${scrolling ? darkMode ? 'scrolling_light' : 'scrolling_dark' : ''}`}>
+      <Container>
+        <div className="nav-main">
+          <div className={`nav-hamburger ${openMenu ? '' : 'openMenu'}`} onClick={handleClickMenu}>
+            <div className='icon-left'></div>
+            <div className='icon-right'></div>
+          </div>
+          <div className='nav-logo'>
+            <div className='nav-name'>
+              <a href='/'>
+                Thanh Dat Dev
+              </a>
+            </div>
+          </div>
+          <div className={`nav-list nav-mobile${openMenu ? '' : ' nav-mobile-active'}`}>
+            <ul onClick={handleClickMenu}>
+              <li>
+                <Link to="/blog" className='underlined'>Blog</Link>
+              </li>
+              <li>
+                <Link to="/" className='underlined' onClick={gotoSkills}>Portfolio</Link>
+              </li>
+              <li>
+                <Link to="/" className='underlined' onClick={gotoProjects}>Projects</Link>
+              </li>
+              <li>
+                <Link to="/" className='underlined' onClick={gotoContact}>Contact</Link>
+              </li>
+            </ul>
+          </div>
+          <div className='nav-toogle'>
+            <button className={darkMode ? 'btn-toogle' : 'btn-toogle-dark'} onClick={changeDarkTheme}>
+              {darkMode ? (
+                <img src={toogleSun} alt="toogleSun" />
+              ) : (
+                <img src={toogleMoon} alt="toogleMoon" />
+              )}
+            </button>
           </div>
         </div>
-        <div className={`nav-list nav-mobile${openMenu ? '' : ' nav-mobile-active'}`}>
-          <ul onClick={handleClickMenu}>
-            <li>
-              <a href='#blog' className='underlined'>Blog</a>
-            </li>
-            <li>
-              <a onClick={gotoSkills} href='#portfolio' className='underlined'>Portfolio</a>
-            </li>
-            <li>
-              <a onClick={gotoProjects} href='#projects' className='underlined'>Projects</a>
-            </li>
-            <li>
-              <a onClick={gotoContact} href='#contact' className='underlined'>Contact</a>
-            </li>
-          </ul>
-        </div>
-        <div className='nav-toogle'>
-          <button className={darkMode ? 'btn-toogle' : 'btn-toogle-dark'} onClick={changeDarkTheme}>
-            {darkMode ? (
-              <img src={toogleSun} alt="toogleSun" />
-            ) : (
-              <img src={toogleMoon} alt="toogleMoon" />
-            )}
-
-          </button>
-        </div>
-        </div>
-        </Container>
-      </div>
-      <div className={`stripes ${darkMode ? 'theme-light' : 'theme-dark'}`}></div>
-    </>
+      </Container>
+    </div>
 
   )
 }
