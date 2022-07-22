@@ -1,6 +1,6 @@
 # My Portfolio
 
-You can see the demo at [https://www.caothanhdat.me](https://www.caothanhdat.me/).
+You can see the demo at [https://www.caothanhdat.dev](https://www.caothanhdat.dev/).
 
 ## What to expect
 
