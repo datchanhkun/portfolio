@@ -1,0 +1,106 @@
+.article-detail {
+  position: relative;
+  margin: 10rem auto;
+}
+
+.article-detail_header a {
+  text-decoration: none;
+  color: #000;
+}
+
+.article-detail_header .article-detail_back{
+  display: flex;
+}
+
+.article-detail_header .article-detail_back > * + * {
+  margin-left: 8px;
+}
+
+.article-detail_header .article-detail_back img {
+  width: 1.5rem;
+  height: auto;
+}
+/* CONTENT */
+.article-detail_content .article-detail_title {
+  text-align: center;
+  margin: 0 auto 3rem auto;
+  font-size: 3rem;
+  max-width: 60%;
+}
+
+.article-detail_content .article-detail_time {
+  display: flex;
+  justify-content: space-between;
+  max-width: 60%;
+  margin: 0 auto 2.5rem;
+  margin-top: 8px;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: gray;
+}
+
+.article-detail_content .article-detail_banner img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.article-detail_content .article-detail_contentMarkdown {
+  max-width: 60%;
+  margin: auto;
+}
+
+.article-detail_content .article-detail_contentMarkdown ul {
+  list-style: none;
+}
+
+.article-detail_content .article-detail_contentMarkdown img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.article-detail_contentMarkdown .article-detail_tags {
+  display: flex;
+  align-items: center;
+  margin: 4rem 0;
+}
+
+.article-detail_contentMarkdown .article-detail_tag {
+  display: inline-block;
+  height: 30px;
+  padding: 1px 10px 0 10px;
+  margin: 0 0 0 20px;
+  border-radius: 9px;
+  position: relative;
+  z-index: 1;
+  background: grey;
+  font-size: 1rem;
+  line-height: 1.7rem;
+  color: white;
+  font-weight: 300;
+}
+
+.article-detail_contentMarkdown .article-detail_tag::before {
+  content: "";
+  display: block;
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  left: -7px;
+  top: 2px;
+  border-radius: 9px;
+  transform: rotate(45.1deg);
+  z-index: -1;
+  background: grey;
+}
+
+.article-detail_contentMarkdown .article-detail_tag::after {
+  content: "";
+  display: block;
+  background: white;
+  height: 8px;
+  width: 8px;
+  position: absolute;
+  left: -5px;
+  top: 11px;
+  border-radius: 100%;
+}

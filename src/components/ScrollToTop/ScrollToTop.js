@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react'
 import './ScrollToTop.css'
 import arrowUp from '../../assets/images/arrowUp.png'
-import { useWindowScroll } from 'react-use'
 import { themeContext } from '../../Context'
 import smoothscroll from 'smoothscroll-polyfill'
 const ScrollToTop = () => {
@@ -10,16 +9,21 @@ const ScrollToTop = () => {
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
 
-  const {y: pageYOffset } = useWindowScroll();
   const [visible, setVisiblity] = useState(false)
 
   useEffect(() => {
-    if(pageYOffset > 400) {
-      setVisiblity(true);
-    } else {
-      setVisiblity(false);
+    const handleScroll = () => {
+      if(window.pageYOffset > 400) {
+        setVisiblity(true);
+      } else {
+        setVisiblity(false);
+      }
     }
-  },[pageYOffset])
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  },[])
   
   const scrollToTop = () => window.scrollTo({top: 0, behavior: 'smooth'})
 

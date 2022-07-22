@@ -1,0 +1,56 @@
+.intro-blog {
+  padding-top: 5rem;
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+}
+
+.intro-blog .intro-blog_left {
+  flex: 0 0 50%;
+}
+.intro-blog .intro-blog_left h1 {
+  font-size: 3rem;
+  line-height: 3.5rem;
+  font-weight: 500;
+}
+
+.intro-blog .intro-blog_left p {
+  font-size: 1.875rem;
+  font-weight: 400;
+  color: #6b7280;
+}
+
+.intro-blog_inputSearch {
+  position: relative;
+  margin-top: 0.25rem;
+  display: flex;
+  height: 4rem;
+  max-width: 32rem;
+  align-items: center;
+  border-radius: 1rem;
+  border-width: 1px;
+  border-color: #e5e7eb;
+}
+
+.intro-blog .intro-blog_left input {
+  width: 100%;
+  border-radius: 0.375rem;
+  border: 1px solid #e5e7eb;
+  background-color: initial;
+  padding: 1rem 3rem 1rem 1.75rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.intro-blog .intro-blog_left input:focus {
+  outline: none;
+}
+
+.intro-blog .intro-blog_right {
+  flex: 0 0 50%;
+  text-align: right;
+}
+
+.intro-blog .intro-blog_right img {
+  width: 60%;
+}

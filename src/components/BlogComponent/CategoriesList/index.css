@@ -1,0 +1,35 @@
+.categories-listItem {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.categories-listItem button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.75rem 1.5rem;
+  font-size: 18px;
+  line-height: 28px;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition-property: all;
+  transition-duration: 0.3s;
+  border: 2px solid transparent;
+}
+
+.categories-listItem button:hover {
+  box-shadow: var(--ability-shadow);
+  border-color: black;
+  transform: scale(1.1);
+}
+
+/* .categoryActive {
+  background: gray;
+} */
+.categoryNotActiveIdx {
+  opacity: 0.6;
+}
+.categoryActiveIdx {
+  opacity: 1;
+  background: gray;
+}
