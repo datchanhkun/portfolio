@@ -2,12 +2,17 @@ import { createContext, useReducer } from 'react'
 
 export const themeContext = createContext()
 
-const initialState = { darkMode: true}
+const initialState = {
+  darkMode: true,
+  titleArticle: ''
+}
 
 const themeReducer = (state, action) => {
   switch(action.type) {
     case 'toggle': 
       return { darkMode: !state.darkMode }
+    case 'titleArticle': 
+      return { titleArticle: action.payload}
     default:
       return state 
   }

@@ -340,6 +340,11 @@
   margin-left: 4px;
 }
 
+.floating-header_left a {
+  text-decoration: none;
+  color: #000;
+}
+
 .floating-header_right {
   display: flex;
   justify-content: center;
