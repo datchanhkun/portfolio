@@ -10,11 +10,11 @@ const initialState = {
 const themeReducer = (state, action) => {
   switch(action.type) {
     case 'toggle': 
-      return { darkMode: !state.darkMode }
+      return { ...state, darkMode: !state.darkMode }
     case 'article': 
-      return { article: action.payload}
+      return { ...state, article: action.payload}
     default:
-      return state 
+      return state;
   }
 }
 

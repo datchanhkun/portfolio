@@ -16,7 +16,6 @@ const Navbar = (props) => {
   const darkMode = theme.state.darkMode;
   const articleData = theme.state.article;
 
-  console.log("darkMode: ", darkMode);
   const [openMenu, setOpenMenu] = useState(true)
   const [scrolling, setScrolling] = useState(false)
 
