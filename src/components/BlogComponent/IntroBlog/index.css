@@ -1,8 +1,8 @@
 .intro-blog {
   padding-top: 5rem;
   display: flex;
-  /* align-items: center;
-  justify-content: center; */
+  align-items: center;
+  justify-content: center;
 }
 
 .intro-blog .intro-blog_left {
@@ -52,5 +52,15 @@
 }
 
 .intro-blog .intro-blog_right img {
-  width: 60%;
+  width: 80%;
+}
+
+/* Responsive Mobile */
+@media only screen and (max-width: 739px){
+  .intro-blog {
+    flex-direction: column-reverse;
+  }
+  .intro-blog .intro-blog_right img {
+    width: 100%;
+  }
 }

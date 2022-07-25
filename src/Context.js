@@ -4,15 +4,15 @@ export const themeContext = createContext()
 
 const initialState = {
   darkMode: true,
-  titleArticle: ''
+  article: {}
 }
 
 const themeReducer = (state, action) => {
   switch(action.type) {
     case 'toggle': 
       return { darkMode: !state.darkMode }
-    case 'titleArticle': 
-      return { titleArticle: action.payload}
+    case 'article': 
+      return { article: action.payload}
     default:
       return state 
   }

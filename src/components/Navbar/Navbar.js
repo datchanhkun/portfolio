@@ -12,10 +12,11 @@ import Twitter from 'assets/images/twitter.svg'
 import { FacebookShareButton } from 'react-share';
 const Navbar = (props) => {
   const {gotoSkills, gotoProjects, gotoContact, bg, isScroll, scroll} = props
-  const theme = useContext(themeContext)
-  const darkMode = theme.state.darkMode
-  const titleArticle = theme.state.titleArticle;
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
+  const articleData = theme.state.article;
 
+  console.log("darkMode: ", darkMode);
   const [openMenu, setOpenMenu] = useState(true)
   const [scrolling, setScrolling] = useState(false)
 
@@ -37,9 +38,9 @@ const Navbar = (props) => {
     setOpenMenu(!openMenu);
   },[openMenu])
 
-  const changeDarkTheme = useCallback(() => {
+  const changeDarkTheme = () => {
     theme.dispatch({type: 'toggle'});
-  },[theme]);
+  }
 
   return (
     <>
@@ -48,8 +49,7 @@ const Navbar = (props) => {
         <Link to="/blog">
           <span className='floating-header_logo'>ThanhDatDev's Blog</span>
         </Link>
-        <span>—</span>
-        <span className='floating-header-title'>{titleArticle}</span>
+        <span className='floating-header-title'>—&nbsp;{articleData?.title}</span>
       </div>
       <div className='floating-header_right'>
         <span className='floating-header_label'>Share this</span>
@@ -59,10 +59,10 @@ const Navbar = (props) => {
         <div className='floating-header_social'>
           <div className='floating-header_facebook icon_social'>
             <FacebookShareButton
-              url={"https://peing.net/ja/"}
-              quote={"フェイスブックはタイトルが付けれるようです"}
-              hashtag={"#hashtag"}
-              description={"aiueo"}
+              url={"https://www.alissanguyen.dev/blog/introduction-to-web-hosting"}
+              quote={articleData?.title}
+              hashtag={"#thanhdatdev-blog"}
+              description={articleData?.description}
             >
               <img src={Facebook} alt="socialFB" />
             </FacebookShareButton>

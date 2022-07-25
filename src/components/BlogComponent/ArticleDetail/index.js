@@ -24,7 +24,7 @@ const ArticleDetail = () => {
     : process.env.REACT_APP_BACKEND_URL +
     props?.image.data.attributes.url;
   useEffect(() => {
-    theme.dispatch({type: 'titleArticle', payload: articles?.articles?.data[0].attributes.title})
+    theme.dispatch({type: 'article', payload: props})
   // eslint-disable-next-line react-hooks/exhaustive-deps
   },[articles])
   return (
@@ -51,7 +51,7 @@ const ArticleDetail = () => {
             <img src={imageUrl} alt="ArticleDetailImg" />
           </div>
           <div className='article-detail_contentMarkdown'>
-            <ReactMarkdown children={props?.content} />
+            <ReactMarkdown children={props?.content} escapeHtml={false} />
             <div className='article-detail_tags'>
               <span>Tags: </span>
               {props?.categories?.data?.map((item, index) => (

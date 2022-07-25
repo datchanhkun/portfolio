@@ -15,3 +15,17 @@
   text-decoration: none;
   color: black;
 }
+
+/* Responsive Tablet Mini*/
+@media only screen and (min-width: 740px) and (max-width: 991px){
+  .blog-articles ul{
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
+
+/* Responsive Mobile */
+@media only screen and (max-width: 739px){
+  .blog-articles ul{
+    grid-template-columns: repeat(1,minmax(0,1fr));
+  }
+}

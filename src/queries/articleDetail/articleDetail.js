@@ -7,6 +7,7 @@ const ARTICLE_DETAIL_QUERY = gql`
         attributes {
           slug
           title
+          description
           content
           createdAt
           updatedAt
