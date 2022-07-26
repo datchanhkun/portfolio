@@ -1,0 +1,36 @@
+.article-related {
+  width: 100%;
+  overflow: hidden;
+  margin: auto;
+  border-top: 2px solid gray;
+  position: relative;
+  margin-bottom: 8rem;
+}
+
+.article-related_list {
+  position: relative;
+  padding: 0 3rem 3rem 3rem;
+}
+.article-related .article-related_card {
+  flex: calc(100% / 3);
+} 
+
+.slick-slider {
+  width: 100%;
+}
+.slick-dots li button:before {
+  font-size: 12px;
+}
+
+.slick-slide>div:first-child {
+  padding: 1rem 2rem;
+}
+.slick-next:before, .slick-prev:before {
+  font-size: 32px;
+  color: #000;
+}
+
+.article-related_card a {
+  text-decoration: none;
+  color: #000;
+}

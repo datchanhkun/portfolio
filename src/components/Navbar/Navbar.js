@@ -58,7 +58,7 @@ const Navbar = (props) => {
         <div className='floating-header_social'>
           <div className='floating-header_facebook icon_social'>
             <FacebookShareButton
-              url={"https://www.alissanguyen.dev/blog/introduction-to-web-hosting"}
+              url={`https://caothanhdat.dev/blog/${articleData?.slug}`}
               quote={articleData?.title}
               hashtag={"#thanhdatdev-blog"}
               description={articleData?.description}

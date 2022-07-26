@@ -2,16 +2,18 @@
   height: 100%;
   transition: all 0.1s linear;
   transform: scale(1);
+  position: relative;
 }
 
-.article-card:hover {
+/* .article-card:hover {
   transform: scale(1.05);
   cursor: pointer;
-}
+} */
 
 .article-card:hover .article-card_btnCopy{
   visibility: visible;
   opacity: 1;
+  z-index: 20;
 }
 
 .article-card .article-card_btnCopy {

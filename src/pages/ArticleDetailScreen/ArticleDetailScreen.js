@@ -1,5 +1,5 @@
 import ArticleDetail from 'components/BlogComponent/ArticleDetail';
-// import ArticleRelated from 'components/BlogComponent/ArticleRelated';
+import ArticleRelated from 'components/BlogComponent/ArticleRelated';
 import Footer from 'components/Footer/Footer';
 import Navbar from 'components/Navbar/Navbar';
 import ScrollToTop from 'components/ScrollToTop/ScrollToTop';
@@ -38,8 +38,8 @@ const ArticleDetailScreen = () => {
       <div className='blog-detail-screen' >
           <Navbar bg={'black'} isScroll={isScroll} scroll={scroll}/>
           <ArticleDetail />
-          {/* <ArticleRelated /> */}
       </div>
+      <ArticleRelated />
       <Footer animation={true} />
       <ScrollToTop />
       <SoundMusic />
