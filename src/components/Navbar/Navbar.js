@@ -1,11 +1,14 @@
 import React, { useCallback, useContext, useEffect, useState } from 'react'
 import './Navbar.css'
 import toogleSun from '../../assets/images/sun.svg'
+import toogleSunLight from 'assets/images/sun-light.svg'
 import toogleMoon from '../../assets/images/moon.svg'
+import toogleMoonDark from 'assets/images/moon-dark.svg'
 import { themeContext } from '../../Context'
 import Container from '../Container/Container'
 import { Link } from 'react-router-dom'
 import ShareIcon from 'assets/images/share.svg'
+import ShareDarkIcon from 'assets/images/share-dark.svg'
 import Facebook from 'assets/images/facebook.svg'
 import Instagram from 'assets/images/instagram.svg'
 import Twitter from 'assets/images/twitter.svg'
@@ -43,7 +46,7 @@ const Navbar = (props) => {
 
   return (
     <>
-    <div className={`floating-header ${isScroll ? 'floating-header_active' : ''}`}>
+    <div className={`floating-header ${darkMode ? 'floating-header_light' : 'floating-header_dark'} ${isScroll ? 'floating-header_active' : ''}`}>
       <div className='floating-header_left'>
         <Link to="/blog">
           <span className='floating-header_logo'>ThanhDatDev's Blog</span>
@@ -51,9 +54,22 @@ const Navbar = (props) => {
         <span className='floating-header-title'>—&nbsp;{articleData?.title}</span>
       </div>
       <div className='floating-header_right'>
+        <div className='nav-toogle'>
+              <button className={darkMode ? 'btn-toogle' : 'btn-toogle-dark'} onClick={changeDarkTheme}>
+                {darkMode ? (
+                  <img src={toogleSunLight} alt="toogleSunLight" />
+                ) : (
+                  <img src={toogleMoonDark} alt="toogleMoonDark" />
+                )}
+              </button>
+        </div>
         <span className='floating-header_label'>Share this</span>
         <div className='floating-header_icon'>
-          <img src={ShareIcon} alt="share-icon" />
+          {darkMode ? (
+            <img src={ShareIcon} alt="share-icon" />
+          ): (
+            <img src={ShareDarkIcon} alt="ShareDarkIcon" />
+          )}
         </div>
         <div className='floating-header_social'>
           <div className='floating-header_facebook icon_social'>

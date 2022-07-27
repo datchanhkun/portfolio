@@ -42,6 +42,31 @@
   line-height: 1.75rem;
 }
 
+.intro-blog .intro-blog_left_light input,
+.intro-blog .intro-blog_left_light input::placeholder {
+  color: #000;
+}
+
+.intro-blog .intro-blog_left_dark input,
+.intro-blog .intro-blog_left_dark input::placeholder {
+  color: #fff;
+}
+
+.intro-blog .intro-blog_left button {
+  border: none;
+  background: transparent;
+  position: absolute;
+  right: 10px;
+  transform: scale(1);
+  transition: all 0.1s linear;
+
+}
+
+.intro-blog .intro-blog_left button:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
 .intro-blog .intro-blog_left input:focus {
   outline: none;
 }

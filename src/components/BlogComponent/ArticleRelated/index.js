@@ -1,18 +1,21 @@
 import ARTICLE_DETAIL_QUERY from 'queries/articleDetail/articleDetail';
-import React from 'react'
+import React, { useContext } from 'react'
 import { useQuery } from '@apollo/client';
 import { useParams } from 'react-router-dom';
 import Slider from "react-slick";
 import Card from '../Card';
 import './index.css'
+import { themeContext } from 'Context';
 const ArticleRelated = () => {
   let { slug } = useParams();
   const { data: articles } = useQuery(ARTICLE_DETAIL_QUERY);
   const dataRelated = articles?.articles?.data.filter(artile => artile.attributes.slug !== slug);
+  const theme = useContext(themeContext)
+  const darkMode = theme.state.darkMode
 
   const settings = {
     dots: true,
-    autoplay: true,
+    autoplay: false,
     autoplayTimeout: 3000,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -32,7 +35,7 @@ const ArticleRelated = () => {
     ],
   };
   return (
-    <div className='u-container article-related'>
+    <div className={`u-container article-related ${darkMode ? 'article-related_light' : 'article-related_dark'}`}>
       <h1 style={{textAlign: 'center'}}>Post Related</h1>
       <div className='article-related_list'>
         <Slider {...settings}>

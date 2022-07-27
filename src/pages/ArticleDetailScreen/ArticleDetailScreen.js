@@ -4,13 +4,16 @@ import Footer from 'components/Footer/Footer';
 import Navbar from 'components/Navbar/Navbar';
 import ScrollToTop from 'components/ScrollToTop/ScrollToTop';
 import SoundMusic from 'components/SoundMusic/SoundMusic';
-import React, { useRef, useState } from 'react'
+import { themeContext } from 'Context';
+import React, { useContext, useRef, useState } from 'react'
 import { useEffect } from 'react';
 import './ArticleDetailScreen.css';
 const ArticleDetailScreen = () => {
   const [scroll, setScroll] = useState(0);
   const refPageYOffset = useRef(0);
   const [isScroll, setIsScroll] = useState(false);
+  const theme = useContext(themeContext)
+  const darkMode = theme.state.darkMode
   useEffect(() => {
     const handleScroll = () => {
       const Scrolled = document.documentElement.scrollTop;
@@ -35,12 +38,12 @@ const ArticleDetailScreen = () => {
 
   return (
     <>
-      <div className='blog-detail-screen' >
-          <Navbar bg={'black'} isScroll={isScroll} scroll={scroll}/>
+      <div className={`blog-detail-screen ${darkMode ? 'blog-detail-screen_light' : 'blog-detail-screen_dark'}`} >
+          <Navbar bg={`${darkMode ? 'var(--nav-color-main)' : 'var(--nav-color-dark)'}`} isScroll={isScroll} scroll={scroll}/>
           <ArticleDetail />
       </div>
       <ArticleRelated />
-      <Footer animation={true} />
+      <Footer animation={darkMode ? true : false} />
       <ScrollToTop />
       <SoundMusic />
     </>

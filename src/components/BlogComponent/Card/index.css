@@ -5,10 +5,10 @@
   position: relative;
 }
 
-/* .article-card:hover {
+.article-card:hover {
   transform: scale(1.05);
   cursor: pointer;
-} */
+}
 
 .article-card:hover .article-card_btnCopy{
   visibility: visible;
@@ -36,6 +36,7 @@
 
 .article-card_wrapper {
   position: relative;
+  background: #fff;
   height: 100%;
   display: flex;
   flex-direction: column;

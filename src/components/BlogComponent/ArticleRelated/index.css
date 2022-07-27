@@ -4,19 +4,22 @@
   margin: auto;
   border-top: 2px solid gray;
   position: relative;
-  margin-bottom: 8rem;
+  padding-bottom: 8rem;
+}
+
+.article-related_light {
+  color: #000;
+}
+
+.article-related_dark {
+  background: var(--bg-color-dark);
+  color: #fff;
 }
 
 .article-related_list {
   position: relative;
   padding: 0 3rem 3rem 3rem;
 }
-/* .article-related .article-related_card {
-  flex: calc(100% / 3);
-  align-content: stretch;
-  align-self: stretch;
-  height: 100%;
-}  */
 
 .slick-slider {
   width: 100%;
@@ -28,12 +31,42 @@
 .slick-slide>div:first-child {
   padding: 1rem 2rem;
 }
-.slick-next:before, .slick-prev:before {
+
+.article-related_light .slick-next:before,
+.article-related_light .slick-prev:before {
   font-size: 32px;
   color: #000;
+}
+
+.article-related_dark .slick-next:before,
+.article-related_dark .slick-prev:before {
+  font-size: 32px;
+  color: #fff;
+}
+
+.article-related_card {
+  height: 100%;
 }
 
 .article-related_card a {
   text-decoration: none;
   color: #000;
+}
+
+.slick-slide {
+  height: auto;
+  display: flex !important;
+  align-items: stretch;
+}
+
+.slick-track {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+}
+
+.article-related_dark .slick-dots li.slick-active button:before,
+.article-related_dark .slick-dots li button:before  {
+  color: #fff;
 }

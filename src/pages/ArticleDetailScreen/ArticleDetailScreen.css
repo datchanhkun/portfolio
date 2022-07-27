@@ -2,6 +2,15 @@
   padding: 0.5rem 15rem;
 }
 
+.blog-detail-screen_light {
+  color: #000;
+}
+
+.blog-detail-screen_dark {
+  background: var(--bg-color-dark);
+  color: #fff;
+}
+
 /* Responsive Mobile */
 @media only screen and (max-width: 739px){
   .blog-detail-screen {

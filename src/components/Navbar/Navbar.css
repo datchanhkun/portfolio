@@ -334,13 +334,31 @@
   left: 0;
   z-index: 2;
   padding-left: 8px;
-  background: white;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 0.5px solid #d6dae1;
   transform: translateY(-100%);
+}
+
+.floating-header_light {
+  background: white;
+  border-bottom: 0.5px solid #d6dae1;
+}
+
+.floating-header_dark {
+  background: #181b1fef;
+  border-bottom: 0.5px solid #181b1fef;
+}
+
+.floating-header .nav-toogle button {
+  border: none;
+  width: auto;
+  height: auto;
+}
+
+.floating-header_dark .floating-header_left a {
+  color: #fff;
 }
 
 .floating-header_active {

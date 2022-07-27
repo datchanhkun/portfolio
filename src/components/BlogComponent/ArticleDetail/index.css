@@ -3,6 +3,16 @@
   margin: 10rem auto;
 }
 
+.article-detail_light p,
+.article-detail_light ul {
+  color: #6b7280;
+}
+
+.article-detail_dark p,
+.article-detail_dark ul {
+  color: #9CA3AF;
+}
+
 .article-detail_header {
   padding-bottom: 2rem;
 }
@@ -14,6 +24,11 @@
 
 .article-detail_header .article-detail_back{
   display: flex;
+  color: #000;
+}
+
+.article-detail_header .article-detail_back_dark {
+  color: #fff;
 }
 
 .article-detail_header .article-detail_back > * + * {
@@ -57,7 +72,6 @@
 .article-detail_content .article-detail_contentMarkdown p {
   text-align: justify;
   font-size: 18px;
-  color: #6b7280;
 }
 
 .article-detail_contentMarkdown h3{
@@ -109,7 +123,6 @@
 .article-detail_content .article-detail_contentMarkdown ul {
   list-style: disc;
   font-size: 18px;
-  color: #6b7280;
 }
 
 .article-detail_content .article-detail_contentMarkdown img {
