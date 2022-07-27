@@ -293,6 +293,12 @@
   .nav-toogle {
     padding: 0.5rem 0;
   }
+  .floating-header-title {
+    display: none;
+  }
+  .floating-header_label {
+    display: none;
+  }
 }
 /* Responsive Tablet */
 @media only screen and (min-width: 740px) and (max-width: 1200px){
@@ -311,6 +317,16 @@
   }
 }
 
+/* Responsive Iphone 5 */
+@media only screen and (max-width: 370px){
+  .floating-header_logo {
+    font-size: 18px;
+  }
+
+  .floating-header_icon {
+    display: none;
+  }
+}
 
 .floating-header {
   position: fixed;
@@ -318,13 +334,31 @@
   left: 0;
   z-index: 2;
   padding-left: 8px;
-  background: white;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid gray;
   transform: translateY(-100%);
+}
+
+.floating-header_light {
+  background: white;
+  border-bottom: 0.5px solid #d6dae1;
+}
+
+.floating-header_dark {
+  background: #181b1fef;
+  border-bottom: 0.5px solid #181b1fef;
+}
+
+.floating-header .nav-toogle button {
+  border: none;
+  width: auto;
+  height: auto;
+}
+
+.floating-header_dark .floating-header_left a {
+  color: #fff;
 }
 
 .floating-header_active {
@@ -338,6 +372,11 @@
 
 .floating-header_left > * + * {
   margin-left: 4px;
+}
+
+.floating-header_left a {
+  text-decoration: none;
+  color: #000;
 }
 
 .floating-header_right {

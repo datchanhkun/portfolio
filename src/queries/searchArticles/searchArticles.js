@@ -1,16 +1,14 @@
 import { gql } from "@apollo/client";
 
-const ARTICLE_DETAIL_QUERY = gql`
-  query Article($slug: String) {
-    articles(filters: { slug: { eq: $slug } }) {
+const SEARCH_ARTICLES = gql`
+  query Article($keyword: String) {
+    articles(filters: { title: { contains: $keyword }}) {
       data {
         attributes {
           slug
           title
           description
           content
-          createdAt
-          updatedAt
           categories {
             data {
               attributes {
@@ -26,17 +24,10 @@ const ARTICLE_DETAIL_QUERY = gql`
               }
             }
           }
-          author {
-            data {
-              attributes {
-                name
-              }
-            }
-          }
         }
       }
     }
   }
 `;
 
-export default ARTICLE_DETAIL_QUERY;
+export default SEARCH_ARTICLES;

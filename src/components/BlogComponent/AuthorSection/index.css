@@ -43,6 +43,15 @@
   font-weight: 300;
 }
 
+.author-section .author-section_about_light span{
+  color: #000;
+}
+
+.author-section .author-section_about_dark span {
+  color: #fff;
+}
+
+
 .author-section .author-section_about > * + * {
   margin-left: 1rem;
 }

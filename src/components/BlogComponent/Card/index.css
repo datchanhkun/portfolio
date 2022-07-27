@@ -2,6 +2,7 @@
   height: 100%;
   transition: all 0.1s linear;
   transform: scale(1);
+  position: relative;
 }
 
 .article-card:hover {
@@ -12,6 +13,7 @@
 .article-card:hover .article-card_btnCopy{
   visibility: visible;
   opacity: 1;
+  z-index: 20;
 }
 
 .article-card .article-card_btnCopy {
@@ -34,6 +36,7 @@
 
 .article-card_wrapper {
   position: relative;
+  background: #fff;
   height: 100%;
   display: flex;
   flex-direction: column;

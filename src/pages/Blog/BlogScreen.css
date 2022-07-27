@@ -1,6 +1,30 @@
 .blog-screen {
-  /* background: var(--bg-color-dark); */
-  /* height: 100%; */
-  /* width: 100%; */
   padding: 0.5rem 15rem;
+}
+
+.blog-screen_light {
+  color: #000;
+}
+
+.blog-screen_dark {
+  background: var(--bg-color-dark);
+  color: #fff;
+}
+/* Responsive Mobile */
+@media only screen and (max-width: 739px){
+  .blog-screen {
+    padding: 0.5rem 2rem;
+  }
+}
+/* Responsive Tablet */
+@media only screen and (min-width: 740px) and (max-width: 1200px){
+  .blog-screen {
+    padding: 0.5rem 4rem;
+  }
+}
+/* Responsive Laptop */
+@media only screen and (min-width: 1201px) and (max-width: 1440px){
+  .blog-screen {
+    padding: 0.5rem 10rem;
+  }
 }
