@@ -11,9 +11,12 @@
   position: relative;
   padding: 0 3rem 3rem 3rem;
 }
-.article-related .article-related_card {
+/* .article-related .article-related_card {
   flex: calc(100% / 3);
-} 
+  align-content: stretch;
+  align-self: stretch;
+  height: 100%;
+}  */
 
 .slick-slider {
   width: 100%;

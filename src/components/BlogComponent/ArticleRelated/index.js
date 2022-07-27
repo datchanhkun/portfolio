@@ -35,7 +35,7 @@ const ArticleRelated = () => {
     <div className='u-container article-related'>
       <h1 style={{textAlign: 'center'}}>Post Related</h1>
       <div className='article-related_list'>
-          <Slider {...settings}>
+        <Slider {...settings}>
           {dataRelated?.map((data, idx) => (
             <div className='article-related_card' key={idx}>
               <Card
